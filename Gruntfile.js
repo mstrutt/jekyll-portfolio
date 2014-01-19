@@ -21,6 +21,19 @@ module.exports = function (grunt) {
 				cwd: 'app',
 				src: ['**/*.{png,jpg,gif}'],
 				dest: 'build'
+			},
+			css: {
+				expand: true,
+				cwd: 'build',
+				src: ['assets/styles/site.min.css'],
+				dest: 'staging'	
+			}
+		},
+		sass: {
+			build: {
+				files: {
+					'app/assets/styles/site.css': 'app/assets/styles/site.scss'
+				}
 			}
 		},
 		imagemin: {
@@ -74,6 +87,12 @@ module.exports = function (grunt) {
 					'build/assets/styles/desktop.css': ['build/assets/styles/site.min.css']
 				}
 			}
+		},
+		watch: {
+			css: {
+				files: ['app/assets/styles/**.scss'],
+				tasks: ['buildcss']
+			}
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -82,6 +101,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-usemin');
 	grunt.loadNpmTasks('grunt-jekyll');
@@ -89,5 +109,6 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('default', ['build']);
 
+	grunt.registerTask('buildcss', ['sass', 'useminPrepare', 'cssmin', 'copy:css']);
     grunt.registerTask('build', ['clean:build', 'useminPrepare', 'uglify', 'cssmin', 'match_media', /**/'copy:images'/*/'imagemin'/**/, 'copy:build', 'usemin', 'jekyll:build']);
 };

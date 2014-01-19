@@ -2,12 +2,13 @@
   "name": "MStrutt-Portiolio",
   "version": "3.0.0",
   "description": "redoing my portfolio with the static site generator Jekyll",
+  "repository": "git@github.com:mstrutt/jekyll-portfolio.git",
   "main": "_site/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mstrutt",
-  "license": "Apache",
+  "license": "Apache v2",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-jekyll": "~0.4.1",
@@ -19,6 +20,7 @@
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-uglify": "~0.3.0",
     "grunt-autoprefixer": "~0.6.4",
-    "grunt-match-media": "0.0.5"
+    "grunt-match-media": "0.0.5",
+    "grunt-contrib-sass": "~0.6.0"
   }
 }
