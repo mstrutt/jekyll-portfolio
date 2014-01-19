@@ -1,0 +1,45 @@
+---
+layout: page
+---
+
+<header class="header">
+	<a id="navicon" class="navicon" href="#">Menu</a>
+
+	<nav role="navigation" class="primary-nav">
+		<a class="about" href="/">About</a>
+		<a class="blog" href="/blog">Blog</a>
+		<a class="portfolio" href="/portfolio">Portfolio</a>
+		<a class="contact" href="/contact">Contact</a>
+	</nav>
+
+	<div class="header-text">
+		<a class="logo" href="/" title="home">MS</a>
+		
+		<h1 class="title">{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
+
+		<?php echo (isset($subheader)) ? $subheader : "" ; ?>
+
+		{% if page.class == "home" %}
+
+			<div class="prefetch">
+				<img src="http://cdn.mstrutt.co.uk/assets/images/illustration.png" alt="Illustration of Michael Strutt done by Kelly Dyson" />
+				<img src="http://cdn.mstrutt.co.uk/assets/images/rating-stars.png" alt="rating stars" />
+			</div>
+
+			<div class="header-text-lower">
+				<p class="subtitle">{{ age }} year old <strong>front-end web developer</strong> based in London</p>
+				<div class="social-links">
+					<a class="rss" title="RSS feed" href="/rss.xml">RSS</a>
+					<a class="linkedin" title="LinkedIn" href="http://www.linkedin.com/profile/view?id=183911833">LinkedIn</a>
+					<a class="twitter" title="Twitter" href="http://twitter.com/mstrutt_co_uk">@mstrutt_co_uk</a>
+				</div>
+			</div>
+
+		{% endif %}
+
+	</div>
+</header>
+
+<div class="main" role="main">
+	{{ content }}
+</div>	
