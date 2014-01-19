@@ -6,10 +6,10 @@ layout: page
 	<a id="navicon" class="navicon" href="#">Menu</a>
 
 	<nav role="navigation" class="primary-nav">
-		<a class="about" href="/">About</a>
-		<a class="blog" href="/blog">Blog</a>
-		<a class="portfolio" href="/portfolio">Portfolio</a>
-		<a class="contact" href="/contact">Contact</a>
+		<a class="about{% if page.class == 'home' %} active {% endif %}" href="/">About</a>
+		<a class="blog{% if page.class == 'blog' %} active {% endif %}" href="/blog">Blog</a>
+		<a class="portfolio{% if page.class == 'portfolio' %} active {% endif %}" href="/portfolio">Portfolio</a>
+		<a class="contact{% if page.class == 'contact' %} active {% endif %}" href="/contact">Contact</a>
 	</nav>
 
 	<div class="header-text">
@@ -27,7 +27,7 @@ layout: page
 			</div>
 
 			<div class="header-text-lower">
-				<p class="subtitle">{{ age }} year old <strong>front-end web developer</strong> based in London</p>
+				<p class="subtitle">a <strong>front-end web developer</strong> based in London</p>
 				<div class="social-links">
 					<a class="rss" title="RSS feed" href="/rss.xml">RSS</a>
 					<a class="linkedin" title="LinkedIn" href="http://www.linkedin.com/profile/view?id=183911833">LinkedIn</a>
