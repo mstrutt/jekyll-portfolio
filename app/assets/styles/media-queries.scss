@@ -1,0 +1,202 @@
+@media (min-width: 480px) {
+	.home .header {
+		padding: 0;
+		height: 390px;
+		text-align: right;
+		border-bottom-color: $darkGreen;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: -56px;
+			max-width: 535px;
+			height: 456px;
+			right: 30%;
+			left: 0;
+			bottom: -10px;
+			background: url(http://cdn.mstrutt.co.uk/assets/images/illustration.png) right 100% no-repeat;
+			background-size: auto 100%;
+		}
+
+		.logo {
+			position: static;
+		}
+
+		.header-text {
+			position: absolute;
+			bottom: 5%;
+			right: 0;
+			left: 41.875%;
+			margin: 0 3.125%;
+		}
+
+		.header-text-lower {
+			background: none;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.title {
+			padding: 0;
+			margin: 1.5rem auto 0;
+			background: none;
+		}
+
+		.subtitle {
+			margin-left: -25px;
+		}
+
+		.social-links {
+			text-align: right;
+
+			> .twitter {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.header .primary-nav {
+		width: 360px;
+		right: 0;
+	}
+}
+
+@media (min-width: 640px) {
+	.home .header {
+		&:before {
+			right: 40%;
+		}
+
+		.header-text {
+			left: 40%;
+		}
+
+		.title strong {
+			display: inline;
+		}
+	}
+
+	.home .main {
+		font-size: 0;
+		padding: 0;
+
+		> section {
+			box-sizing: border-box;
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			padding: 0 2rem;
+		}
+	}
+}
+
+@media (min-width: 960px) {
+	.header,
+	.main,
+	.footer {
+		width: 84%;
+		margin-left: 12%;
+		margin-right: auto;
+	}
+
+	.header {
+		margin-top: 40px;
+		border-top: 0 none;
+		border-radius: 0 10px 0 0;
+
+		.primary-nav {
+			opacity: 1;
+			pointer-events: all;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 100%;
+			width: 90px;
+			z-index: -1;
+			box-shadow: none;
+
+			> a {
+				position: relative;
+				display: block;
+				width: auto;
+				margin: 0 0 1rem;
+				padding: 12% 0;
+				border-radius: 5px 0 0 5px;
+				box-shadow: inset -10px 0 10px -10px rgba(0,0,0,.15);
+
+				&:before {
+					width: 66%;
+					padding: 0 0 54%;
+				}
+			}
+		}
+
+		.logo {
+			top: -28px;
+			left: auto;
+			right: 10px;
+		}
+
+		.title {
+			margin: 0;
+		}
+	}
+
+	.home .header {
+		height: 410px;
+
+		&:before {
+			top: -36px;
+		}
+
+		.logo {
+			height: 120px;
+			width: 120px;
+			line-height: 130px;
+			font-size: 54px;
+		}
+	}
+
+	.navicon {
+		display: none;
+	}
+
+	.main {
+		min-height: 360px;
+	}
+
+	.footer .social-links {
+		width: auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.header,
+	.main,
+	.footer {
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+
+	.main {
+		padding-left: 8rem;
+		padding-right: 8rem;
+		padding-bottom: 2rem;
+	}
+
+	.home .main {
+		padding: 0 4rem 2rem;
+
+		> section {
+			padding: 0 4rem;
+		}
+	}
+
+	.header .title {
+		padding-left: 8rem;
+		padding-right: 8rem;
+	}
+}

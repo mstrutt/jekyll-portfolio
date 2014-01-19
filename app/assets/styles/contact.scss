@@ -1,0 +1,79 @@
+.form-fields {
+	> li {
+		display: table;
+		width: 100%;
+		margin: 1em 0;
+	}
+
+	.field {
+		display: table-footer-group;
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 100%;
+		height: 3rem;
+		padding: .5rem;
+		font-size: 1.4rem;
+		line-height: 2rem;
+		border: 0 none;
+		box-shadow: 0 0 1px $darkgrey;
+
+		&.multiline {
+			height: auto;
+		}
+
+		&:focus {
+			box-shadow: 0 0 1px $darkgrey, 0 0 5px $deepOrange;
+			outline: none;
+		}
+	}
+
+	label {
+		display: table-header-group;
+		box-sizing: border-box;
+	}
+
+	@media (min-width: 540px) {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 820px) {
+		> li {
+			margin: 2em 0;
+		}
+
+		.field,
+		label {
+			display: block;
+			float: right;
+			margin: 0;
+		}
+
+		.field {
+			width: 70%;
+			max-width: 70%;
+		}
+
+		label {
+			width: 30%;
+
+			&:after {
+				content: ":";
+			}
+		}
+	}
+
+	.honey {
+		display: none;
+	}
+}
+
+.contact form .button {
+	@media (min-width: 540px) {
+		margin-left: 10%;
+	}
+
+	@media (min-width: 820px) {
+		margin-left: 34%;
+	}
+}
