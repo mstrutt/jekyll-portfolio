@@ -1,0 +1,4 @@
+<p class="metadata">
+	Written by <span itemprop="author">{% if post.author %}{{ post.author }}{% else %}Michael Strutt{% endif %}</span>
+	on <time itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>.
+</p>

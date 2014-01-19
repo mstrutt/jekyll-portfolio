@@ -1,1 +1,9 @@
-<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+<article itemscope itemtype="http://schema.org/BlogPosting">
+	<header>
+		<h1 class="title" itemprop="name"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+	</header>
+	<span itemprop="articleBody">{% if post.preview %}<p>{{ post.preview }}</p>{% else %}{{ post.excerpt }}{% endif %}</span> <a href="{{ post.url }}" class="read-more">Read more</a>
+	<footer class="blog-list">
+		{% include metadata.html %}
+	</footer>
+</article>

@@ -2,5 +2,5 @@ name: MStrutt.co.uk
 markdown: redcarpet
 pygments: true
 permalink: /blog/:year/:month/:title/
-tag_page_dir: /blog/tags/
-tag_index_dir: /blog/tags/
+category_title_prefix: "Blog posts tagged with: "
+category_dir: /blog/tags/

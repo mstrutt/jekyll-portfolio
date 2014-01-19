@@ -17,7 +17,7 @@ layout: page
 		
 		<h1 class="title">{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
 
-		<?php echo (isset($subheader)) ? $subheader : "" ; ?>
+		{% if page.subheader %}{{ page.subheader }}{% endif %}
 
 		{% if page.class == "home" %}
 

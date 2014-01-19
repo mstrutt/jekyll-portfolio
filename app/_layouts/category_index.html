@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+{% for post in site.categories[page.category] %}
+	{% include post.html %}
+	<div class="categories">Filed under {{ post.categories | category_links }}</div>
+{% endfor %}

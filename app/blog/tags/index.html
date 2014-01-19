@@ -1,0 +1,11 @@
+---
+layout: default
+class: blog
+title: Blog tags
+---
+
+<ul>
+{% for category in site.categories %}
+	<li><a href="{{ category[0] }}">{{ category[0] }}</a></li>
+{% endfor %}
+</ul>

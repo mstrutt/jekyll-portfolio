@@ -1,9 +1,23 @@
 ---
 layout: default
+class: blog
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+<article itemscope="" itemtype="http://schema.org/BlogPosting">
+	<span itemprop="articleBody" class="markdown">
+		{{ content }}
+	</span>
+	<footer class="single-post">
+		<p class="metadata">
+	Written by <span itemprop="author">{% if page.author %}{{ page.author }}{% else %}Michael Strutt{% endif %}</span>
+	 on <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>.
+		</p>
+		{% if page.categories %}
+			<p class="tags">Categories: 
+				{% for cat in page.categories %}
+					<a href="/blog/tags/{{ cat }}/">{{ cat }}</a>
+				{% endfor %}
+			</p>
+		{% endif %}
+	</footer>
+</article>
