@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Notes from &#35;lwslightning
-preview: My notes from London Web Standards November Event #lwslightning - Architecting for Success from Daniel Knell, and four lightning-talks by Laura Dawson, Leonard Houx, Fabio Bertone, and Daniel Appelquist.
+preview: My notes from London Web Standards November Event &#35;lwslightning - Architecting for Success from Daniel Knell, and four lightning-talks by Laura Dawson, Leonard Houx, Fabio Bertone, and Daniel Appelquist.
 date: 2014-01-20 22:26:49
 categories:
 - notes
