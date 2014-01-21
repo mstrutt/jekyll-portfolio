@@ -3,9 +3,10 @@
 		init: function() {
 			this.touchTest();
 			this.navicon();
+			this.scrollTop();
 			if (this.select.twitter !== null)
 				this.twitter();
-			if (this.select.hideCode !== null)
+			if (this.select.hideCode !== null && window.localStorage && localStorage.hideCode !== "true")
 				this.hideCode();
 			if (this.select.skillsList.length)
 				this.skillsList();
@@ -61,41 +62,50 @@
 				} else if (req.readyState === 4) {
 					onError();
 				}
-			}
+			};
 
 			req.open("GET", "/assets/twitter/index.php?exclude_replies=true&count=10", true);
 			req.send();
 		},
 		hideCode: function() {
+			var codeBlock = document.getElementsByClassName('see-my-code')[0];
+			
+			codeBlock.className = codeBlock.className.replace(/\b is-hidden\b/,'');
+
 			this.select.hideCode.addEventListener('click', function(e){
 				e.preventDefault();
 				
 				document.getElementsByClassName('see-my-code')[0].className += ' is-hidden';
 
-				var exdate = new Date();
-				exdate.setDate(exdate.getDate() + 30);
-				document.cookie="code" + "=hide; expires="+exdate.toUTCString();
+				localStorage.hideCode = "true";
 			});
 		},
 		skillsList: function () {
-			var list, i;
+			var list, i,
+				toggle = function () {
+					toggleOpenClass(this.getElementsByClassName('sub-skills')[0]);
+				};
 			for (i = 0; i < this.select.skillsList.length; i++) {
 				list = this.select.skillsList[i];
 				list.style.height = list.offsetHeight+"px";
 				toggleOpenClass(list);
 
-				list.parentNode.addEventListener('click', function(){
-					toggleOpenClass(this.getElementsByClassName('sub-skills')[0])
-				});
+				list.parentNode.addEventListener('click', toggle);
 			}
+		},
+		scrollTop: function () {
+			document.getElementById('gotToTop').addEventListener('click', function(e){
+				e.preventDefault();
+				window.scroll(0,0);
+			});
 		}
-	}
+	};
 
 	function toggleOpenClass(elm) {
 		if (elm.className.indexOf('open') === -1) {
 			elm.className += ' open';
 		} else {
-			elm.className = elm.className.replace(/\b open\b/,'');;
+			elm.className = elm.className.replace(/\b open\b/,'');
 		}
 	}
 
