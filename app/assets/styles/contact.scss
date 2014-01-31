@@ -32,12 +32,12 @@
 		box-sizing: border-box;
 	}
 
-	@media (min-width: 540px) {
+	@media (min-width: 33.75em) { // 540px
 		width: 80%;
 		margin: 0 auto;
 	}
 
-	@media (min-width: 820px) {
+	@media (min-width: 51.25em) { // 820px
 		> li {
 			margin: 2em 0;
 		}
@@ -69,11 +69,11 @@
 }
 
 .contact form .button {
-	@media (min-width: 540px) {
+	@media (min-width: 33.75em ) { // 540px
 		margin-left: 10%;
 	}
 
-	@media (min-width: 820px) {
+	@media (min-width: 51.25em) { // 820px
 		margin-left: 34%;
 	}
 }

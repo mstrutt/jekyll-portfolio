@@ -198,11 +198,11 @@
 	> a.active,
 	> a:hover {
 	
-		@media (max-width: 959px) {
+		@media (max-width: 59.9375em) { //959px
 			box-shadow: inset 0 0 15px 5px $orange;
 		}
 
-		@media (min-width: 960px) {
+		@media (min-width: 60em) { // 960px
 			background: $deepOrange;
 		}
 
@@ -215,14 +215,14 @@
 		&.portfolio:before {background-position: 66% 100%;}
 		&.contact:before {background-position: 100% 100%;}
 
-		@media (min-width: 960px) {
+		@media (min-width: 60em) { // 960px
 			&:not(.active) {
 				outline: none;
 			}
 		}
 	}
 
-	@media (min-width: 960px) {
+	@media (min-width: 60em) { // 960px
 		> a.active:after {
 			content: "";
 			position: absolute;
@@ -250,13 +250,13 @@
 	.inner {
 		position: relative;
 
-		@media (min-width: 960px) {
+		@media (min-width: 60em) { // 960px
 			width: 84%;
 			margin-left: 12%;
 			margin-right: auto;
 		}
 
-		@media (min-width: 1200px) {
+		@media (min-width: 75em) { // 1200px
 			width: 1000px;
 			margin-left: auto;
 			margin-right: auto;
@@ -312,7 +312,7 @@
 		vertical-align: top;
 	}
 
-	@media (max-width: 959px) {
+	@media (max-width: 59.9375em) { // 959px
 		display: none;
 	}
 }

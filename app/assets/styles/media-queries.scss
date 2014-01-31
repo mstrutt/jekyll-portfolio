@@ -1,4 +1,4 @@
-@media (min-width: 480px) {
+@media (min-width: 30em) { // 480px
 	.home .header {
 		padding: 0;
 		height: 390px;
@@ -63,7 +63,7 @@
 	}
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40em) { // 640px
 	.home .header {
 		&:before {
 			right: 40%;
@@ -92,7 +92,7 @@
 	}
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60em) { // 960px
 	.header,
 	.main,
 	.footer {
@@ -172,7 +172,7 @@
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75em) { // 1200px
 	.header,
 	.main,
 	.footer {

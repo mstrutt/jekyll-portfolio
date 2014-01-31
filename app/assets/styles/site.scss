@@ -143,12 +143,12 @@ a {
 		padding: 0 2rem 2rem;
 		margin: -.5rem 3.125% 0;
 
-		@media (min-width: 975px) {
+		@media (min-width: 60.9375em) { // 975px
 			margin-left: 0;
 			margin-right: 0;
 		}
 
-		@media (min-width: 1200px) {
+		@media (min-width: 75em) { // 1200px
 			padding-left: 8rem;
 			padding-right: 8rem;
 		}
@@ -279,7 +279,7 @@ form {
 		@include transform(translateY(1px))
 	}
 
-	@media (min-width: 540px) {
+	@media (min-width: 33.75) { // 540px
 		width: auto;
 		padding: 0 0 0 1.5rem;
 
