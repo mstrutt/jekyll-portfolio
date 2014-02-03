@@ -36,6 +36,15 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		autoprefixer: {
+			options: {
+				browsers: ['last 3 version']
+			},
+			main: {
+				src: 'app/assets/styles/site.css',
+				dest: 'app/assets/styles/site.css'
+			}
+		},
 		imagemin: {
 			build: {
 				files: [{
@@ -91,7 +100,7 @@ module.exports = function (grunt) {
 		watch: {
 			css: {
 				files: ['app/assets/styles/**.scss'],
-				tasks: ['buildcss']
+				tasks: ['buildcss', 'copy:css']
 			}
 		}
 	});
@@ -109,6 +118,6 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('default', ['build']);
 
-	grunt.registerTask('buildcss', ['sass', 'useminPrepare', 'cssmin', 'copy:css']);
+	grunt.registerTask('buildcss', ['sass', 'autoprefixer', 'useminPrepare', 'cssmin']);
     grunt.registerTask('build', ['clean:build', 'useminPrepare', 'uglify', 'cssmin', 'match_media', /**/'copy:images'/*/'imagemin'/**/, 'copy:build', 'usemin', 'jekyll:build']);
 };
