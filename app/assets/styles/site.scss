@@ -364,6 +364,8 @@ form {
 
 	.with-sub {
 		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		transform: translateZ(0);
 	}
 }
 
