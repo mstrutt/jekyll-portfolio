@@ -17,10 +17,10 @@
 		background: url('http://cdn.mstrutt.co.uk/assets/images/noise.png') $logogrey;
 		color: $white;
 		text-align: center;
-		@include transform(rotate(-7.5deg) scale(1.01));
+		transform: rotate(-7.5deg) scale(1.01);
 		/*&:hover {
-			@include transform(rotate(352.5deg) scale(1.01));
-			@include transition(ease-out .6s);
+			transform: rotate(352.5deg) scale(1.01);
+			transition: ease-out .6s;
 		}*/
 	}
 
@@ -32,7 +32,7 @@
 		width: 50px;
 		background: $orange;
 		border-radius: 5px;
-		@include transition(linear .05s);
+		transition: linear .05s;
 		cursor: pointer;
 		overflow: hidden;
 		text-indent: 100%;
@@ -65,7 +65,7 @@
 		pointer-events: none;
 		z-index: 2;
 		box-shadow: inset 0 -15px 10px -10px #E69123;
-		@include transition(opacity linear .2s);
+		transition: opacity linear .2s;
 
 
 		&.open {
@@ -150,14 +150,13 @@
 			left: 0;
 			right: 0;
 			height: 50px;
-			@include linear-gradient(to bottom, rgba(248,248,248,0), $lightgrey);
+			background: linear-gradient(to bottom, rgba(248,248,248,0), $lightgrey);
 		}
 	}
 
 	.social-links {
 		margin: 15px 0 0;
 		padding: 0 0 15px;
-		//border-bottom: 10px solid@include rgba(230,230,230,.8);
 	}
 }
 
@@ -173,13 +172,13 @@
 	 	border-radius: 50%;
 	 	margin: 5px;
 	 	@extend .ir;
-	 	@include transition(.2s);
+	 	transition: .2s;
 
 	 	&:focus,
 	 	&:active,
 	 	&:hover {
 	 		background-color: rgba(63,63,63,.6);
-			@include transform(scale(1.1, 1.1));
+			transform: scale(1.1, 1.1);
 			outline: none;
 	 	}
 	 }
@@ -233,7 +232,7 @@
 			width: 0;
 			background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") $lightgrey;
 			border-radius: 0 0 5px 0;
-			//@include transition(.2s);
+			// transition: .2s;
 			border: 10px solid transparent;
 			border-color: transparent white white transparent;
 			box-shadow: 3px 3px 6px rgba(0, 0, 0, .1), inset -7px -7px 15px -20px rgba(0,0,0,.2);
@@ -290,7 +289,7 @@
 		}
 
 		&:active {
-			@include transform(translateY(1px));
+			transform: translateY(1px);
 		}
 	}
 
@@ -322,5 +321,5 @@
 	margin: 0;
 	opacity: 0;
 	overflow: hidden;
-	@include transition(.5s);
+	transition: .5s;
 }

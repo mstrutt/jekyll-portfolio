@@ -1,5 +1,3 @@
-@import "bourbon/bourbon";
-
 /* Resets */
 
 body {
@@ -88,7 +86,7 @@ a {
 	font-style: italic;
 	text-decoration: none;
 	color: $orange;
-	@include transition(.2s);
+	transition: .2s;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 
 	&:focus,
@@ -241,7 +239,7 @@ form {
 	color: $white;
 	text-align: center;
 	border-radius: 5px;
-	@include transition(background .2s);
+	transition: background .2s;
 	overflow: hidden;
 	cursor: pointer;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -276,7 +274,7 @@ form {
 	}
 
 	&:active {
-		@include transform(translateY(1px))
+		transform: translateY(1px);
 	}
 
 	@media (min-width: 33.75) { // 540px
@@ -374,7 +372,7 @@ form {
 	padding: 0 0 .3rem;
 	margin-top: -0.3rem;
 	overflow: hidden;
-	@include transition(.2s);
+	transition: .2s;
 
 	&:before {
 		content: "+";
