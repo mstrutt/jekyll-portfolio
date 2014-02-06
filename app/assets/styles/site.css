@@ -11,12 +11,12 @@ ul {
 /* Helper */
 .ir, .social-links > a {
   overflow: hidden;
-  	/** /
-   	white-space: nowrap;
-  	text-indent: 100%;
-  	/*/
+  /** /
+ 	white-space: nowrap;
+	text-indent: 100%;
+	/*/
   /**/ }
-  .ir:before, .social-links > a:before {
+  .ir:before {
     content: "";
     display: block;
     width: 100%;
@@ -31,36 +31,36 @@ ul {
   font-family: 'Enriqueta';
   font-style: normal;
   font-weight: 400;
-  src: url("http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Regular-webfont.eot");
-  src: url("http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Regular-webfont.woff") format("woff"), url("http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Regular-webfont.ttf") format("truetype"), url("http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Regular-webfont.svg#EnriquetaRegular") format("svg"); }
+  src: url('http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Regular-webfont.eot');
+  src: url('http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Regular-webfont.woff') format('woff'), url('http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Regular-webfont.ttf') format('truetype'), url('http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Regular-webfont.svg#EnriquetaRegular') format('svg'); }
 
 @font-face {
   font-family: 'Enriqueta';
   font-style: normal;
   font-weight: 700;
-  src: url("http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Bold-webfont.eot");
-  src: url("http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Bold-webfont.woff") format("woff"), url("http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Bold-webfont.ttf") format("truetype"), url("http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Bold-webfont.svg#EnriquetaBold") format("svg"); }
+  src: url('http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Bold-webfont.eot');
+  src: url('http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Bold-webfont.woff') format('woff'), url('http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Bold-webfont.ttf') format('truetype'), url('http://cdn.mstrutt.co.uk/assets/fonts/Enriqueta-Bold-webfont.svg#EnriquetaBold') format('svg'); }
 
 @font-face {
   font-family: 'Lora';
   font-style: italic;
   font-weight: 700;
-  src: url("http://cdn.mstrutt.co.uk/assets/fonts/Lora-BoldItalic-webfont.eot");
-  src: url("http://cdn.mstrutt.co.uk/assets/fonts/Lora-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("http://cdn.mstrutt.co.uk/assets/fonts/Lora-BoldItalic-webfont.woff") format("woff"), url("http://cdn.mstrutt.co.uk/assets/fonts/Lora-BoldItalic-webfont.ttf") format("truetype"), url("http://cdn.mstrutt.co.uk/assets/fonts/Lora-BoldItalic-webfont.svg#LoraBoldItalic") format("svg"); }
+  src: url('http://cdn.mstrutt.co.uk/assets/fonts/Lora-BoldItalic-webfont.eot');
+  src: url('http://cdn.mstrutt.co.uk/assets/fonts/Lora-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('http://cdn.mstrutt.co.uk/assets/fonts/Lora-BoldItalic-webfont.woff') format('woff'), url('http://cdn.mstrutt.co.uk/assets/fonts/Lora-BoldItalic-webfont.ttf') format('truetype'), url('http://cdn.mstrutt.co.uk/assets/fonts/Lora-BoldItalic-webfont.svg#LoraBoldItalic') format('svg'); }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: url("http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Regular-webfont.eot");
-  src: url("http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Regular-webfont.woff") format("woff"), url("http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg"); }
+  src: url('http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Regular-webfont.eot');
+  src: url('http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Regular-webfont.woff') format('woff'), url('http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg'); }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  src: url("http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Semibold-webfont.eot");
-  src: url("http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Semibold-webfont.woff") format("woff"), url("http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Semibold-webfont.ttf") format("truetype"), url("http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold") format("svg"); }
+  src: url('http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Semibold-webfont.eot');
+  src: url('http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Semibold-webfont.woff') format('woff'), url('http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Semibold-webfont.ttf') format('truetype'), url('http://cdn.mstrutt.co.uk/assets/fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg'); }
 
 html {
   font-size: 10px; }
@@ -68,7 +68,7 @@ html {
 body {
   font-size: 1.4rem;
   line-height: 1.25em;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   color: #404040;
   overflow-y: scroll; }
@@ -77,28 +77,27 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Enriqueta", serif;
   font-weight: normal; }
 
-p, .markdown ul li,
-label {
+p, .markdown ul li, label {
   font-size: 1.4rem;
   line-height: 3rem;
   margin: 1em 0; }
 
 a {
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   font-size: 1.05em;
   font-weight: 700;
   font-style: italic;
   text-decoration: none;
-  color: #f29925;
-  -webkit-transition: .2s;
-  transition: .2s;
+  color: #F29925;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   a:focus, a:active, a:hover {
-    color: #f77913; }
+    color: #F77913; }
 
-.touch p > a, .touch .markdown ul li > a, .markdown ul .touch li > a {
+.touch p > a {
   position: relative; }
-  .touch p > a:before, .touch .markdown ul li > a:before, .markdown ul .touch li > a:before {
+  .touch p > a:before {
     content: "";
     position: absolute;
     top: -10px;
@@ -109,19 +108,19 @@ a {
 .title {
   font-size: 3.6rem;
   line-height: 4rem;
-  font-family: "Enriqueta", serif;
+  font-family: 'Enriqueta', serif;
   font-weight: normal;
   color: #404040;
-  margin: .8em 0 .5em; }
+  margin: 0.8em 0 0.5em; }
   .title strong {
     display: block;
     font-weight: bold;
-    color: white; }
+    color: #FFFFFF; }
 
 .subtitle {
   font-size: 2.2rem;
   line-height: 3rem;
-  font-family: "Enriqueta", serif;
+  font-family: 'Enriqueta', serif;
   font-weight: normal;
   margin: 10px 0; }
   .subtitle strong {
@@ -130,7 +129,7 @@ a {
   .subtitle.subheader {
     display: inline-block;
     padding: 0 2rem 2rem;
-    margin: -.5rem 3.125% 0; }
+    margin: -0.5rem 3.125% 0; }
     @media (min-width: 60.9375em) {
       .subtitle.subheader {
         margin-left: 0;
@@ -153,16 +152,16 @@ body {
   position: relative;
   min-width: 320px;
   padding-bottom: 20px;
-  background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") #f8f8f8; }
+  background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") #F8F8F8; }
 
 .main {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
   width: 93.75%;
-  margin: -.8em auto 4rem;
-  padding: .2rem 2rem;
-  background: white;
+  margin: -0.8em auto 4rem;
+  padding: 0.2rem 2rem;
+  background: #FFFFFF;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 16px 20px -20px rgba(0, 0, 0, 0.3);
   border-radius: 0 0 10px 10px; }
   .main:before, .main:after {
@@ -173,7 +172,7 @@ body {
     left: 10px;
     right: 10px;
     height: 10px;
-    background: white;
+    background: #FFFFFF;
     border-radius: 0 0 10px 10px;
     z-index: -1; }
   .main:before {
@@ -183,15 +182,13 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 7px 15px -4px rgba(0, 0, 0, 0.5); }
   .main:after {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 5px 13px -4px rgba(0, 0, 0, 0.3); }
-  .main > p:first-child, .markdown ul .main > li:first-child,
-  .main > article > p:first-child,
-  .markdown ul .main > article > li:first-child {
+  .main > p:first-child, .main > article > p:first-child {
     margin-top: 3rem; }
 
 .header {
   position: relative;
-  border-top: 70px solid white;
-  background: #bfd75f url(http://cdn.mstrutt.co.uk/assets/images/noise.png);
+  border-top: 70px solid #FFFFFF;
+  background: #BFD75F url(http://cdn.mstrutt.co.uk/assets/images/noise.png);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   z-index: 2; }
   .header .logo {
@@ -201,28 +198,28 @@ body {
     display: inline-block;
     height: 88px;
     width: 88px;
-    font: 38px/96px "Enriqueta", serif;
+    font: 38px/96px 'Enriqueta', serif;
     border-radius: 50%;
-    background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") #3e3e3e;
-    color: white;
+    background: url('http://cdn.mstrutt.co.uk/assets/images/noise.png') #3E3E3E;
+    color: #FFFFFF;
     text-align: center;
     -webkit-transform: rotate(-7.5deg) scale(1.01);
     -ms-transform: rotate(-7.5deg) scale(1.01);
     transform: rotate(-7.5deg) scale(1.01);
     /*&:hover {
-    	transform: rotate(352.5deg) scale(1.01);
-    	transition: ease-out .6s;
-    }*/ }
+			transform: rotate(352.5deg) scale(1.01);
+			transition: ease-out .6s;
+		}*/ }
   .header .navicon {
     position: absolute;
     top: -60px;
     right: 3.125%;
     height: 50px;
     width: 50px;
-    background: #f29925;
+    background: #F29925;
     border-radius: 5px;
-    -webkit-transition: linear .05s;
-    transition: linear .05s;
+    -webkit-transition: linear 0.05s;
+    transition: linear 0.05s;
     cursor: pointer;
     overflow: hidden;
     text-indent: 100%; }
@@ -238,7 +235,7 @@ body {
       right: 12px;
       height: 3px;
       border-radius: 3px;
-      box-shadow: 0 3px 0 white, 0 12px 0 white, 0 21px 0 white; }
+      box-shadow: 0 3px 0 #FFFFFF, 0 12px 0 #FFFFFF, 0 21px 0 #FFFFFF; }
   .header .primary-nav {
     position: absolute;
     display: table;
@@ -248,8 +245,8 @@ body {
     pointer-events: none;
     z-index: 2;
     box-shadow: inset 0 -15px 10px -10px #E69123;
-    -webkit-transition: opacity linear .2s;
-    transition: opacity linear .2s; }
+    -webkit-transition: opacity linear 0.2s;
+    transition: opacity linear 0.2s; }
     .header .primary-nav.open {
       opacity: 1;
       pointer-events: all; }
@@ -259,13 +256,13 @@ body {
       text-align: center;
       vertical-align: middle;
       padding: 4% 0 3%;
-      font-family: "Open Sans", sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-weight: 600;
       font-size: 1.4rem;
       line-height: 2rem;
       font-style: normal;
-      background: #f29925;
-      color: white; }
+      background: #F29925;
+      color: #FFFFFF; }
       .header .primary-nav > a:before {
         content: "";
         display: block;
@@ -275,7 +272,7 @@ body {
         margin: auto;
         background: url("http://cdn.mstrutt.co.uk/assets/images/nav-icons-large.png") 0 0 no-repeat;
         background-size: auto 200%;
-        opacity: .7; }
+        opacity: 0.7; }
       .header .primary-nav > a.blog:before {
         background-position: 33% 0; }
       .header .primary-nav > a.portfolio:before {
@@ -286,7 +283,7 @@ body {
     padding: 1.5rem 2rem;
     margin: 0 3.125%; }
   .header .subtitle {
-    color: #6c6c6c; }
+    color: #6C6C6C; }
 
 .home .header {
   border-bottom: 10px solid #E4E4E4;
@@ -301,7 +298,7 @@ body {
   .home .header .header-text-lower {
     position: relative;
     padding: 1px 0 0;
-    background: #f8f8f8; }
+    background: #F8F8F8; }
     .home .header .header-text-lower:before {
       content: "";
       position: absolute;
@@ -309,8 +306,8 @@ body {
       left: 0;
       right: 0;
       height: 50px;
-      background: -webkit-linear-gradient(top, rgba(248, 248, 248, 0), #f8f8f8);
-      background: linear-gradient(to bottom, rgba(248, 248, 248, 0), #f8f8f8); }
+      background: -webkit-linear-gradient(top, rgba(248, 248, 248, 0), #F8F8F8);
+      background: linear-gradient(to bottom, rgba(248, 248, 248, 0), #F8F8F8); }
   .home .header .social-links {
     margin: 15px 0 0;
     padding: 0 0 15px; }
@@ -325,8 +322,8 @@ body {
     background-color: rgba(63, 63, 63, 0.3);
     border-radius: 50%;
     margin: 5px;
-    -webkit-transition: .2s;
-    transition: .2s; }
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
     .social-links > a:focus, .social-links > a:active, .social-links > a:hover {
       background-color: rgba(63, 63, 63, 0.6);
       -webkit-transform: scale(1.1, 1.1);
@@ -339,47 +336,23 @@ body {
     background-position: -120px 0; }
 
 @media (max-width: 59.9375em) {
-  .header .primary-nav > a:focus,
-  .header .primary-nav > a:active,
-  .header .primary-nav > a.active,
-  .header .primary-nav > a:hover {
-    box-shadow: inset 0 0 15px 5px #f29925; } }
+  .header .primary-nav > a:focus, .header .primary-nav > a:active, .header .primary-nav > a.active, .header .primary-nav > a:hover {
+    box-shadow: inset 0 0 15px 5px #F29925; } }
 @media (min-width: 60em) {
-  .header .primary-nav > a:focus,
-  .header .primary-nav > a:active,
-  .header .primary-nav > a.active,
-  .header .primary-nav > a:hover {
-    background: #f77913; } }
-.header .primary-nav > a:focus:before,
-.header .primary-nav > a:active:before,
-.header .primary-nav > a.active:before,
-.header .primary-nav > a:hover:before {
+  .header .primary-nav > a:focus, .header .primary-nav > a:active, .header .primary-nav > a.active, .header .primary-nav > a:hover {
+    background: #F77913; } }
+.header .primary-nav > a:focus:before, .header .primary-nav > a:active:before, .header .primary-nav > a.active:before, .header .primary-nav > a:hover:before {
   opacity: 1; }
-.header .primary-nav > a:focus.about:before,
-.header .primary-nav > a:active.about:before,
-.header .primary-nav > a.active.about:before,
-.header .primary-nav > a:hover.about:before {
+.header .primary-nav > a:focus.about:before, .header .primary-nav > a:active.about:before, .header .primary-nav > a.active.about:before, .header .primary-nav > a:hover.about:before {
   background-position: 0 100%; }
-.header .primary-nav > a:focus.blog:before,
-.header .primary-nav > a:active.blog:before,
-.header .primary-nav > a.active.blog:before,
-.header .primary-nav > a:hover.blog:before {
+.header .primary-nav > a:focus.blog:before, .header .primary-nav > a:active.blog:before, .header .primary-nav > a.active.blog:before, .header .primary-nav > a:hover.blog:before {
   background-position: 33% 100%; }
-.header .primary-nav > a:focus.portfolio:before,
-.header .primary-nav > a:active.portfolio:before,
-.header .primary-nav > a.active.portfolio:before,
-.header .primary-nav > a:hover.portfolio:before {
+.header .primary-nav > a:focus.portfolio:before, .header .primary-nav > a:active.portfolio:before, .header .primary-nav > a.active.portfolio:before, .header .primary-nav > a:hover.portfolio:before {
   background-position: 66% 100%; }
-.header .primary-nav > a:focus.contact:before,
-.header .primary-nav > a:active.contact:before,
-.header .primary-nav > a.active.contact:before,
-.header .primary-nav > a:hover.contact:before {
+.header .primary-nav > a:focus.contact:before, .header .primary-nav > a:active.contact:before, .header .primary-nav > a.active.contact:before, .header .primary-nav > a:hover.contact:before {
   background-position: 100% 100%; }
 @media (min-width: 60em) {
-  .header .primary-nav > a:focus:not(.active),
-  .header .primary-nav > a:active:not(.active),
-  .header .primary-nav > a.active:not(.active),
-  .header .primary-nav > a:hover:not(.active) {
+  .header .primary-nav > a:focus:not(.active), .header .primary-nav > a:active:not(.active), .header .primary-nav > a.active:not(.active), .header .primary-nav > a:hover:not(.active) {
     outline: none; } }
 @media (min-width: 60em) {
   .header .primary-nav > a.active:after {
@@ -390,7 +363,7 @@ body {
     display: block;
     height: 0;
     width: 0;
-    background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") #f8f8f8;
+    background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") #F8F8F8;
     border-radius: 0 0 5px 0;
     border: 10px solid transparent;
     border-color: transparent white white transparent;
@@ -399,7 +372,7 @@ body {
 .see-my-code {
   height: 70px;
   margin-bottom: -20px;
-  background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") #d1d1d1;
+  background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") #D1D1D1;
   box-shadow: inset 0 -2px 10px -5px rgba(0, 0, 0, 0.2); }
   .see-my-code .inner {
     position: relative; }
@@ -419,21 +392,21 @@ body {
     cursor: pointer;
     font-size: 1.6rem;
     line-height: 1.25em;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     font-style: normal;
     color: #404040; }
     .see-my-code .close:before {
       content: "X";
       display: inline-block;
-      margin-right: .5em;
+      margin-right: 0.5em;
       width: 30px;
       height: 30px;
       text-align: center;
       line-height: 30px;
       vertical-align: middle;
       color: transparent;
-      background: url("http://cdn.mstrutt.co.uk/assets/images/arrow-sprite.png") no-repeat -45px -5px #888888;
+      background: url("http://cdn.mstrutt.co.uk/assets/images/arrow-sprite.png") no-repeat -45px -5px #888;
       cursor: pointer;
       border-radius: 5px; }
     .see-my-code .close:active {
@@ -461,8 +434,8 @@ body {
   margin: 0;
   opacity: 0;
   overflow: hidden;
-  -webkit-transition: .5s;
-  transition: .5s; }
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
 
 form {
   margin-bottom: 2rem; }
@@ -470,20 +443,20 @@ form {
 .button {
   position: relative;
   display: inline-block;
-  background: #f29925;
+  background: #F29925;
   width: 100%;
   margin: 1rem 0;
   border: 0 none;
   font-size: 1.6rem;
   line-height: 4rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: white;
+  color: #FFFFFF;
   text-align: center;
   border-radius: 5px;
-  -webkit-transition: background .2s;
-  transition: background .2s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
   overflow: hidden;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -499,13 +472,13 @@ form {
     color: transparent;
     cursor: pointer; }
   .button:focus, .button:active, .button:hover {
-    background: #f77913;
-    color: white; }
+    background: #F77913;
+    color: #FFFFFF; }
   .button.alt {
     background: #404040;
     /*&:hover {
-    	background: $midgrey;
-    }*/ }
+			background: $midgrey;
+		}*/ }
   .button:active {
     -webkit-transform: translateY(1px);
     -ms-transform: translateY(1px);
@@ -576,11 +549,11 @@ form {
 
 .sub-skills {
   display: block;
-  padding: 0 0 .3rem;
+  padding: 0 0 0.3rem;
   margin-top: -0.3rem;
   overflow: hidden;
-  -webkit-transition: .2s;
-  transition: .2s; }
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
   .sub-skills:before {
     content: "+";
     display: block;
@@ -592,7 +565,7 @@ form {
     line-height: 44px;
     font-size: 30px;
     text-align: center;
-    color: #6c6c6c; }
+    color: #6C6C6C; }
   .sub-skills.open:before {
     content: "-"; }
   .sub-skills:not(.open) {
@@ -600,7 +573,7 @@ form {
   .sub-skills > li {
     font-size: 1.4rem;
     line-height: 1.8rem;
-    padding: .5rem 0 .5rem 1.5rem;
+    padding: 0.5rem 0 0.5rem 1.5rem;
     color: #404040; }
 
 .star-ratings {
@@ -616,7 +589,7 @@ form {
     display: block;
     height: 22px;
     width: 27px;
-    background: white url("http://cdn.mstrutt.co.uk/assets/images/rating-stars.png") -2px -22px repeat-x; }
+    background: #FFFFFF url("http://cdn.mstrutt.co.uk/assets/images/rating-stars.png") -2px -22px repeat-x; }
   .star-ratings:after {
     left: 0;
     background-position: -2px -44px; }
@@ -693,10 +666,10 @@ form {
       text-align: right; }
       .home .header .social-links > .twitter {
         margin-right: 0; }
-
   .header .primary-nav {
     width: 360px;
     right: 0; } }
+
 @media (min-width: 40em) {
   .home .header:before {
     right: 40%; }
@@ -704,7 +677,6 @@ form {
     left: 40%; }
   .home .header .title strong {
     display: inline; }
-
   .home .main {
     font-size: 0;
     padding: 0; }
@@ -715,14 +687,12 @@ form {
       vertical-align: top;
       width: 50%;
       padding: 0 2rem; } }
+
 @media (min-width: 60em) {
-  .header,
-  .main,
-  .footer {
+  .header, .main, .footer {
     width: 84%;
     margin-left: 12%;
     margin-right: auto; }
-
   .header {
     margin-top: 40px;
     border-top: 0 none;
@@ -754,7 +724,6 @@ form {
       right: 10px; }
     .header .title {
       margin: 0; }
-
   .home .header {
     height: 410px; }
     .home .header:before {
@@ -764,36 +733,30 @@ form {
       width: 120px;
       line-height: 130px;
       font-size: 54px; }
-
   .navicon {
     display: none; }
-
   .main {
     min-height: 360px; }
-
   .footer .social-links {
     width: auto; } }
+
 @media (min-width: 75em) {
-  .header,
-  .main,
-  .footer {
+  .header, .main, .footer {
     width: 1000px;
     margin-left: auto;
     margin-right: auto; }
-
   .main {
     padding-left: 8rem;
     padding-right: 8rem;
     padding-bottom: 2rem; }
-
   .home .main {
     padding: 0 4rem 2rem; }
     .home .main > section {
       padding: 0 4rem; }
-
   .header .title {
     padding-left: 8rem;
     padding-right: 8rem; } }
+
 /* Contact */
 .form-fields > li {
   display: table;
@@ -806,7 +769,7 @@ form {
   width: 100%;
   max-width: 100%;
   height: 3rem;
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 1.4rem;
   line-height: 2rem;
   border: 0 none;
@@ -814,7 +777,7 @@ form {
   .form-fields .field.multiline {
     height: auto; }
   .form-fields .field:focus {
-    box-shadow: 0 0 1px #404040, 0 0 5px #f77913;
+    box-shadow: 0 0 1px #404040, 0 0 5px #F77913;
     outline: none; }
 .form-fields label {
   display: table-header-group;
@@ -827,8 +790,7 @@ form {
 @media (min-width: 51.25em) {
   .form-fields > li {
     margin: 2em 0; }
-  .form-fields .field,
-  .form-fields label {
+  .form-fields .field, .form-fields label {
     display: block;
     float: right;
     margin: 0; }
@@ -855,7 +817,7 @@ form {
   margin: 2rem 0;
   overflow: hidden;
   border-radius: 5px;
-  background: #f3f3f3; }
+  background: #F3F3F3; }
   .portfolio-section.new:after {
     content: "New!";
     position: absolute;
@@ -864,12 +826,12 @@ form {
     right: -20px;
     font-size: 2rem;
     line-height: 2.8rem;
-    font-family: "Enriqueta", serif;
+    font-family: 'Enriqueta', serif;
     font-weight: 700;
-    background: #bfd75f;
-    color: white;
+    background: #BFD75F;
+    color: #FFFFFF;
     text-align: center;
-    box-shadow: 0 0 3px -1px #6c6c6c;
+    box-shadow: 0 0 3px -1px #6C6C6C;
     -webkit-transform-origin: 100% 0;
     -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
@@ -881,19 +843,19 @@ form {
     height: 0;
     padding: 0 0 50%;
     margin: 0 0 -25%;
-    background: 0 0 no-repeat #f3f3f3;
+    background: 0 0 no-repeat #F3F3F3;
     background-size: 100%; }
   .portfolio-section .info {
     padding: 2rem;
-    background: -webkit-linear-gradient(top, rgba(243, 243, 243, 0.8), #f3f3f3 0.75, #f3f3f3);
-    background: linear-gradient(to bottom, rgba(243, 243, 243, 0.8), #f3f3f3 0.75, #f3f3f3); }
+    background: -webkit-linear-gradient(top, rgba(243, 243, 243, 0.8), #F3F3F3 0.75, #F3F3F3);
+    background: linear-gradient(to bottom, rgba(243, 243, 243, 0.8), #F3F3F3 0.75, #F3F3F3); }
   .portfolio-section .title {
     font-size: 2.6rem;
     line-height: 3rem;
-    font-family: "Enriqueta", serif;
+    font-family: 'Enriqueta', serif;
     font-weight: normal;
     color: #404040;
-    margin: 0 0 .5em; }
+    margin: 0 0 0.5em; }
   @media (min-width: 45em) {
     .portfolio-section .image {
       position: absolute;
@@ -907,13 +869,12 @@ form {
       background-size: cover; }
     .portfolio-section .info {
       margin-left: 50%;
-      background: #f3f3f3; } }
+      background: #F3F3F3; } }
 
 /* Blog */
 .metadata {
   font-weight: normal; }
-  .metadata > span,
-  .metadata > time {
+  .metadata > span, .metadata > time {
     font-weight: bold; }
 
 .blog .main {
