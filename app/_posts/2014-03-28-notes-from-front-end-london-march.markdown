@@ -38,6 +38,8 @@ categories:
 
 ##Exploring CSS3's 3D space - [Daniel Grant](https://twitter.com/danieljohngrant)
 
+Check out the [highly impressive demonstrations](http://codepen.io/collection/gKutL/) Daniel put together, including a CSS Solar System
+
 - The basics: transform
 	- translate
 	- rotate
@@ -48,8 +50,6 @@ categories:
 - `transition` will show you the frames in between
 - Ooh, pretty thing is pretty!
 - Is 3D CSS useful? Yeah, but as a learning tool
-
-Note: really this one had to be seen to be believed, hopefully Daniel will share links to his codepens and I can update this space.
 
 ##Can code quality be measured? - [Tim Ruffles](https://twitter.com/timruffles)
 
