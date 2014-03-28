@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Notes from &#35;lwshttp
-preview: My notes from London Web Standards March Event &#35;lwshttp - Playlister: Developing a new music product at the BBC by Sara Gonzalo, and What to expect from HTTP/2 from Mark Nottingham.
+preview: My notes from London Web Standards March Event &#35;lwshttp - Playlister&#58; Developing a new music product at the BBC by Sara Gonzalo, and What to expect from HTTP/2 from Mark Nottingham.
 date: 2014-03-17 21:30:38
 categories:
 - notes
