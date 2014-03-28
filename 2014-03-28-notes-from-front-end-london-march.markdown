@@ -34,7 +34,7 @@ categories:
 - Homework:
 	- next time something goes horribly wrong, give credit instead of criticism
 	- Help someone fix something, go through it with them
-	- Ask someone a question?
+	- Ask someone a question
 
 ##Exploring CSS3's 3D space - [Daniel Grant](https://twitter.com/danieljohngrant)
 
