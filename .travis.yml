@@ -8,3 +8,5 @@ before_install:
 notifications:
   webhooks:
     secure: WJgBxmb6QedCX8itJ+1bA4vgodNAX0fXmTmOCPJ+FWkplno4hBZawRJpcKyXHcrbi/Ov1wLaUSaEfwdI6HzVxMY2C+ZdRHcnFXzGQHKIqPk0ZLxVuo5LoBT+x7243XrO1PrRuYFg1KZekad3ZoRh4yc+dVZ+2w5BWciCjrUROXU=
+    on_success: always
+    on_failure: never
