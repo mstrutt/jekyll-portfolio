@@ -7,5 +7,4 @@ before_install:
 - npm install -g grunt-cli
 notifications:
   webhooks:
-    secure: oF42kbdAKD+aRcN+PmhnlwrppAum2PYpAB+aLVKzEW3rnGpJ++4Q8fG7sAPTWAzdacdWrk6mzcav6+f3lzVp9Z6nK/hmx+y68UGAgHazMWQJBwpaS/mrtz9iDYYlkV/EfhPNsjrOvc26A2BhcC8cY1jDkCIydNn7osn3hHB7qoU=
-    on_failure: never    
+    secure: WJgBxmb6QedCX8itJ+1bA4vgodNAX0fXmTmOCPJ+FWkplno4hBZawRJpcKyXHcrbi/Ov1wLaUSaEfwdI6HzVxMY2C+ZdRHcnFXzGQHKIqPk0ZLxVuo5LoBT+x7243XrO1PrRuYFg1KZekad3ZoRh4yc+dVZ+2w5BWciCjrUROXU=
