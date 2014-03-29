@@ -86,7 +86,7 @@ a {
 	font-style: italic;
 	text-decoration: none;
 	color: $orange;
-	transition: .2s;
+	transition:  color .2s;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 
 	&:focus,
