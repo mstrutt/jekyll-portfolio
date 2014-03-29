@@ -16,7 +16,7 @@ ul {
 	text-indent: 100%;
 	/*/
   /**/ }
-  .ir:before {
+  .ir:before, .social-links > a:before {
     content: "";
     display: block;
     width: 100%;
@@ -95,9 +95,9 @@ a {
   a:focus, a:active, a:hover {
     color: #F77913; }
 
-.touch p > a {
+.touch p > a, .touch p > .markdown ul li, .markdown ul .touch p > li {
   position: relative; }
-  .touch p > a:before {
+  .touch p > a:before, .touch p > .markdown ul li, .markdown ul .touch p > li {
     content: "";
     position: absolute;
     top: -10px;
@@ -182,7 +182,7 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 7px 15px -4px rgba(0, 0, 0, 0.5); }
   .main:after {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 5px 13px -4px rgba(0, 0, 0, 0.3); }
-  .main > p:first-child, .main > article > p:first-child {
+  .main > p:first-child, .main > .markdown ul li:first-child, .markdown ul .main > li:first-child, .main > article > p:first-child, .main > article > .markdown ul li:first-child, .markdown ul .main > article > li:first-child {
     margin-top: 3rem; }
 
 .header {
