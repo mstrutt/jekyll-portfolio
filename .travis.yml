@@ -1,7 +1,11 @@
 language: node_js
 node_js:
-  - "0.10"
+- '0.10'
 before_install:
-  - "gem install rdoc"
-  - "gem install jekyll"
-  - "npm install -g grunt-cli"
+- gem install rdoc
+- gem install jekyll
+- npm install -g grunt-cli
+notifications:
+  webhooks:
+    secure: oF42kbdAKD+aRcN+PmhnlwrppAum2PYpAB+aLVKzEW3rnGpJ++4Q8fG7sAPTWAzdacdWrk6mzcav6+f3lzVp9Z6nK/hmx+y68UGAgHazMWQJBwpaS/mrtz9iDYYlkV/EfhPNsjrOvc26A2BhcC8cY1jDkCIydNn7osn3hHB7qoU=
+	on_failure: never    
