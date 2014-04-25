@@ -2,7 +2,7 @@
 layout: post
 title: Notes from Front-end London April
 preview: My notes from Front-end London's April Event - The world keeps spinning round and round from Arran Ross-Paterson, Bridging the gap between developers and designers with Sass from Kaelig Deloumeau-Prigent, and Over promised and under delivered from Peter Gasston.
-date: 2014-03-28 15:06:15
+date: 2014-04-25 15:06:15
 categories:
 - notes
 - fel
