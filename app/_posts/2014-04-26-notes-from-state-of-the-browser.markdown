@@ -74,7 +74,7 @@ categories:
 	- Control volume
 	- Create filters
 	- Create sound
-	- Analise sound
+	- Analyse sound
 - Although we can't use a direct sound file or line in, we can get microphone from the Web Audio API
 	- Not bad support for `getUserMedia`
 - [http://dancing.rumyra.com/shake-n-track](http://dancing.rumyra.com/shake-n-track)
