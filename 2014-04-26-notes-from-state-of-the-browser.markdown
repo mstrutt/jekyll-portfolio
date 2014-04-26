@@ -11,7 +11,7 @@ categories:
 
 ##Firefox OS: not only promises - [Fernando Campo](https://twitter.com/ferkhamp) and [Borja Salguero](https://twitter.com/borjasalguero)
 
-- Telefonica going from their old OS to Firefox OS: harder, better, faster, stronger
+- Telefónica going from their old OS to Firefox OS: harder, better, faster, stronger
 - Firefox OS simulator available in Firefox Nightly
 - [perf-o-matic](http://datazilla.mozilla.org)
 - [Project Eideticker](http://wiki.mozilla.org/Project_Eideticker) measures perceived rendering performance
