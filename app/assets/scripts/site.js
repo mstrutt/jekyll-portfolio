@@ -10,7 +10,6 @@
 				this.hideCode();
 			if (this.select.skillsList.length)
 				this.skillsList();
-			FastClick.attach(document.body);
 		},
 		select: {
 			twitter: document.getElementById('latest-tweets'),
