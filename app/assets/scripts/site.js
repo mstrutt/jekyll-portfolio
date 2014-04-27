@@ -40,7 +40,7 @@
 					i = 0;
 				
 				for (; i < tweets.length && i < 5; i++) {
-					output += '<li>' + tweets[i].text
+					output += '<li>' + tweets[i]
 						.replace(/(http(s*):\/\/(t.co\/[a-zA-z0-9]*))/g, '<a href="$1">$3</a>')
 						.replace(/(@([a-z*A-Z*_*0-9*]*))/g, '<a href="http://twitter.com/$2">$1</a>')
 						.replace(/#([a-zA-Z0-9\.\/-_+=?&\~\']*)/g, '<a href="http://twitter.com/search/%23$1">#$1</a>');
