@@ -64,7 +64,7 @@
 				}
 			};
 
-			req.open("GET", "/assets/twitter/index.php?exclude_replies=true&count=10", true);
+			req.open("GET", "//mstrutt.co.uk:8080/tweets.json", true);
 			req.send();
 		},
 		hideCode: function() {
