@@ -47,7 +47,10 @@
 		margin: 1em 0;
 
 		li {
-			@extend p;
+			@extend %touch-link;
+			
+			font-size: 1.4rem;
+			line-height: 3rem;
 			margin: 0;
 		}
 
