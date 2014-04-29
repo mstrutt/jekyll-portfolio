@@ -33,6 +33,8 @@ categories:
 
 ## Intro to @viewport & other new Responsive Web Design CSS features - [Andreas Bovens](https://twitter.com/andreasbovens)
 
+[view presentation on slideshare](http://www.slideshare.net/andreasbovens/presentation-sotb2014)
+
 - New from Opera
 	- Opera for Android now has a tablet release using Blink
 	- Opera for iOS has begun
@@ -67,6 +69,8 @@ categories:
 	- Viewport-relative lengths 
 
 ##Browsers at play - [Ruth John](https://twitter.com/rumyra)
+
+All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 
 - VJing - creating the visuals to go along with music
 - Pretty great support for CSS animations now
@@ -105,7 +109,7 @@ categories:
 
 ##High-performance web platform - [Martin Beeby](https://twitter.com/thebeebs)
 
-[Slides](http://bit.ly/perfSOTB)
+[Presentation on PowerPoint Online](http://bit.ly/perfSOTB)
 
 - Demos on [@tobint's website](http://tobint.com/)
 - Bandwidth isn't the performance issue, latency is
