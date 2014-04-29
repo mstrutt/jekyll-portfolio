@@ -11,6 +11,8 @@ categories:
 
 ##Firefox OS: not only promises - [Fernando Campo](https://twitter.com/ferkhamp) and [Borja Salguero](https://twitter.com/borjasalguero)
 
+[Slides on slides.com](http://slides.com/fercampo/not-only-promises/)
+
 - Telefónica going from their old OS to Firefox OS: harder, better, faster, stronger
 - Firefox OS simulator available in Firefox Nightly
 - [perf-o-matic](http://datazilla.mozilla.org)
@@ -90,6 +92,8 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 
 ##Network connectivity: optional - [Jake Archibald](https://twitter.com/jaffathecake)
 
+[Slides on speakerdeck](https://speakerdeck.com/jaffathecake/the-web-the-bird-at-the-zoo)
+
 - Take a look at your phone's home screen, ask yourself why you can't use the browser for that?
 	- Push notifications
 	- New content even while offline
@@ -138,6 +142,8 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 - When developing, always think about low end devices first
 
 ##Brace yourselves: responsive images are coming - [Yoav Weiss](https://twitter.com/yoavweiss)
+
+[Slides available on GitHub.io](http://yoavweiss.github.io/respimg-sotb-presentation/#/)
 
 - srcset has been implemented, picture element is coming
 - [IndieGoGo campaign for implementing the picture element](https://www.indiegogo.com/projects/picture-element-implementation-in-blink#home)
@@ -189,6 +195,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 	- [kippt.com/hereinthehive/element-query-resources](http://kippt.com/hereinthehive/element-query-resources)
 	- Some good positives, but also lots of negatives
 	- Where needed we should give it a play, try and use it now and try and work towards an end solution
+	- [Some of the JavaScript is available on GitHub](https://github.com/hereinthehive/responsive-modules)
 - Question your defaults, don't just do what you've always done, always think what's best for the situation
 
 ##Open web apps: going beyond the desktop - [Chris Heilmann](https://twitter.com/codepo8)
