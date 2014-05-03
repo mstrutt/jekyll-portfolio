@@ -38,10 +38,19 @@
 		cursor: pointer;
 		overflow: hidden;
 		text-indent: 100%;
+		-webkit-tap-highlight-color: transparent;
 
+		outline: none;
+
+		&:hover,
+		&:focus {
+			background: $deepOrange;
+		}
+		
 		&.open {
 			height: 60px;
 			border-radius: 5px 5px 0 0;
+			background: $orange;
 		}
 
 		&:before {
