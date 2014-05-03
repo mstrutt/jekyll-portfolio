@@ -102,6 +102,10 @@ module.exports = function (grunt) {
 				files: ['app/assets/styles/**.scss'],
 				tasks: ['buildcss', 'copy:css']
 			},
+			js: {
+				files: ['app/**.js'],
+				tasks: ['build']
+			},
 			html: {
 				files: ['app/**.html', 'app/**.markdown'],
 				tasks: ['build']
