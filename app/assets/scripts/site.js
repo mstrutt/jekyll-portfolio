@@ -99,10 +99,10 @@
 		}
 	};
 
-	function toggleClass(elm, class) {
-		var reg = new RegExp(' '+class+'|'+class+' *');
-		if (elm.className.indexOf(class) === -1) {
-			elm.className += ' '+class;
+	function toggleClass(elm, cls) {
+		var reg = new RegExp(' '+cls+'|'+cls+' *');
+		if (elm.className.indexOf(cls) === -1) {
+			elm.className += ' '+cls;
 		} else {
 			elm.className = elm.className.replace(reg, '');
 		}
