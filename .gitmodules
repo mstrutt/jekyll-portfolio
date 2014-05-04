@@ -1,0 +1,3 @@
+[submodule "app/_posts"]
+	path = app/_posts
+	url = git@github.com:mstrutt/blog.git
