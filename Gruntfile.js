@@ -86,7 +86,7 @@ module.exports = function (grunt) {
 						post: {}
 					}
 				},
-				root: 'app',
+				root: 'build',
 				dest: 'build'
 			}
 		},
