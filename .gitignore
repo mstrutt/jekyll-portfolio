@@ -1,5 +1,7 @@
 build
+development
 staging
+live
 **.sass-cache
 node_modules
 **.css
