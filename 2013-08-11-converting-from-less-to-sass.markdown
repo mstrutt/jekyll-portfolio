@@ -2,6 +2,7 @@
 layout: post
 title: Converting from LESS to SASS
 date: 2013-08-11 17:59:24
+preview: Initially I fell down on the LESS side of this divide, the main reason being the ease of it. All you have to do is include the javascript file and you're away. Syntactically it's a whole lot easier to use as well, there's almost no extra syntax to learn, and writing custom mixins takes no time at all.
 categories:
 - less
 - sass
@@ -15,7 +16,7 @@ It would seem that a lot of people coming here are looking for a *how* more than
 
 ## Starting with LESS
 
-Initially I fell down on the [LESS](http://lesscss.org/) side of this divide, the main reason being the ease of it. All you have to do is include the javascript file and you're away. Syntactically it's a whole lot easier to use as well, there's almost no extra syntax to learn, and writing custom mixins takes no time at all.
+Initially I fell down on the [LESS](http://lesscss.org/) side of this divide, the main reason being the ease of it. All you have to do is include the JavaScript file and you're away. Syntactically it's a whole lot easier to use as well, there's almost no extra syntax to learn, and writing custom mixins takes no time at all.
 
 With the extra syntax to learn, and the additional setup on any machine I wanted to dev from, I never really gave [SASS](http://sass-lang.com/) much of a look. That is until I started back at work. The first project I got put on starting back at MICROS already had SASS integrated into it, so I had the opportunity to give it a proper trial.
 
@@ -71,9 +72,9 @@ Now all the automated parts are done, it's down to some manual tweaking for any 
 
 ## A couple of last gripes
 
-I'm not entirely sure I like the way `@extend` works. This may just be my aversion to anything that tries to take control of my code, but sometimes the way it renders the code isn't what you expect to happen, and things like backup colors can get stipped out. I also think all of the extra syntax is not completely necessary, and that makes it less accessible, it's part of the reason I didn't choose SASS in the first place.
+I'm not entirely sure I like the way `@extend` works. This may just be my aversion to anything that tries to take control of my code, but sometimes the way it renders the code isn't what you expect to happen, and things like backup colours can get stripped out. I also think all of the extra syntax is not completely necessary, and that makes it less accessible, it's part of the reason I didn't choose SASS in the first place.
 
-### Several months on (Updated: 05/05/2014)
+### Several months on (updated: 05/05/2014)
 
 There are still some situations where I feel that LESS is more powerful than SASS. Mainly it's speed, not just in easy to get up and running with, but it's compilation time is really fast (to the point it could run in browser) and although the official command-line version didn't have a watch command, the fact that it's JavaScript-based makes node versions of the compiler both easy, and without limitation of language change. In the past I've used [banshee](https://www.npmjs.org/package/banshee) to compile when I save, and the CSS is there ready when I refresh.
 
