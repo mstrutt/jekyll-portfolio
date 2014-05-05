@@ -14,7 +14,7 @@
 		select: {
 			twitter: document.getElementById('latest-tweets'),
 			hideCode: document.getElementById('hide-my-code'),
-			skillsList:  document.getElementsByClassName('sub-skills')
+			skillsList:  document.getElementsByClassName('with-sub')
 		},
 		touchTest: function() {
 			if ("ontouchstart" in window)
@@ -25,8 +25,8 @@
 			document.getElementById('navicon').addEventListener('click', function(){
 				var nav = document.getElementsByClassName('primary-nav')[0];
 				
-				toggleOpenClass(nav, 'open');
-				toggleOpenClass(this, ' open');
+				toggleClass(nav, 'open');
+				toggleClass(this, ' open');
 			});
 		},
 		twitter: function() {
@@ -82,14 +82,13 @@
 		skillsList: function () {
 			var list, i,
 				toggle = function () {
-					toggleOpenClass(this.getElementsByClassName('sub-skills')[0]);
+					toggleClass(this, 'open');
 				};
 			for (i = 0; i < this.select.skillsList.length; i++) {
 				list = this.select.skillsList[i];
 				list.style.height = list.offsetHeight+"px";
-				toggleOpenClass(list);
-
-				list.parentNode.addEventListener('click', toggle);
+				toggleClass(list, 'open');
+				list.addEventListener('click', toggle);
 			}
 		},
 		scrollTop: function () {
@@ -100,11 +99,12 @@
 		}
 	};
 
-	function toggleOpenClass(elm) {
-		if (elm.className.indexOf('open') === -1) {
-			elm.className += ' open';
+	function toggleClass(elm, cls) {
+		var reg = new RegExp(' '+cls+'|'+cls+' *');
+		if (elm.className.indexOf(cls) === -1) {
+			elm.className += ' '+cls;
 		} else {
-			elm.className = elm.className.replace(/\b open\b/,'');
+			elm.className = elm.className.replace(reg, '');
 		}
 	}
 

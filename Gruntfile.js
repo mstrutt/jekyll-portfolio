@@ -2,7 +2,9 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		clean: {
-			build: ['build']
+			build: ['build'],
+			development: ['development'],
+			staging: ['staging']
 		},
 		copy: {
 			build: {
@@ -10,7 +12,7 @@ module.exports = function (grunt) {
 				cwd: 'app',
 				src: [
 					'**',
-					'!assets/scripts/**',
+					// '!assets/scripts/**',
 					'!assets/styles/**',
 					'!assets/images/**'
 				],
@@ -22,17 +24,29 @@ module.exports = function (grunt) {
 				src: ['**/*.{png,jpg,gif}'],
 				dest: 'build'
 			},
+			js: {
+				expand: true,
+				cwd: 'app',
+				src: ['assets/scripts/**'],
+				dest: 'development'
+			},
 			css: {
 				expand: true,
 				cwd: 'build',
-				src: ['assets/styles/site.min.css'],
-				dest: 'staging'	
+				src: ['assets/styles/**.css'],
+				dest: 'development'	
+			},
+			deploy: {
+				expand: true,
+				cwd: 'staging',
+				src: ['**'],
+				dest: 'live'
 			}
 		},
 		sass: {
 			build: {
 				files: {
-					'app/assets/styles/site.css': 'app/assets/styles/site.scss'
+					'build/assets/styles/site.css': 'app/assets/styles/site.scss'
 				}
 			}
 		},
@@ -41,8 +55,8 @@ module.exports = function (grunt) {
 				browsers: ['last 3 version']
 			},
 			main: {
-				src: 'app/assets/styles/site.css',
-				dest: 'app/assets/styles/site.css'
+				src: 'build/assets/styles/site.css',
+				dest: 'build/assets/styles/site.css'
 			}
 		},
 		imagemin: {
@@ -61,7 +75,7 @@ module.exports = function (grunt) {
 			}
 		},
 		useminPrepare: {
-			html: 'app/_layouts/page.html',
+			html: 'build/_layouts/page.html',
 			options: {
 				flow: {
 					html: {
@@ -72,7 +86,7 @@ module.exports = function (grunt) {
 						post: {}
 					}
 				},
-				root: 'app',
+				root: 'build',
 				dest: 'build'
 			}
 		},
@@ -83,9 +97,15 @@ module.exports = function (grunt) {
 			options: {
 				config: '_config.yml'
 			},
-			build: {
+			development: {
 				options: {
 					src : 'build',
+					dest: 'development'
+				}
+			},
+			staging: {
+				options: {
+					src: 'build',
 					dest: 'staging'
 				}
 			}
@@ -93,7 +113,7 @@ module.exports = function (grunt) {
 		match_media: {
 			desktop: {
 				files: {
-					'build/assets/styles/desktop.css': ['build/assets/styles/site.min.css']
+					'build/assets/styles/desktop.css': ['build/assets/styles/site.css']
 				}
 			}
 		},
@@ -101,6 +121,14 @@ module.exports = function (grunt) {
 			css: {
 				files: ['app/assets/styles/**.scss'],
 				tasks: ['buildcss', 'copy:css']
+			},
+			js: {
+				files: ['app/**.js'],
+				tasks: ['copy:js']
+			},
+			html: {
+				files: ['app/**.html', 'app/**.markdown'],
+				tasks: ['copy:build', 'jekyll:development']
 			}
 		}
 	});
@@ -116,8 +144,39 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.loadNpmTasks('grunt-match-media');
 
-	grunt.registerTask('default', ['build']);
+	grunt.registerTask('default', ['development', 'watch']);
 
-	grunt.registerTask('buildcss', ['sass', 'autoprefixer', 'useminPrepare', 'cssmin']);
-    grunt.registerTask('build', ['clean:build', 'useminPrepare', 'uglify', 'cssmin', 'match_media', /**/'copy:images'/*/'imagemin'/**/, 'copy:build', 'usemin', 'jekyll:build']);
+	grunt.registerTask('buildcss', ['sass', 'autoprefixer']);
+	grunt.registerTask('minify', [
+		'useminPrepare',
+		'uglify',
+		'cssmin',
+		'usemin',
+	]);
+
+	grunt.registerTask('development', [
+		'clean:build',
+		'copy:build',
+		'copy:images',
+		'buildcss',
+		'jekyll:development'
+	]);
+
+	grunt.registerTask('staging', [
+		'clean:build',
+		'copy:build',
+		/** /
+			'copy:images'/*/
+			'imagemin'
+		/**/,
+		'buildcss',
+		'match_media',
+		'minify',
+		'jekyll:staging'
+	]);
+
+	grunt.registerTask('deploy', [
+		'staging',
+		'copy:deploy'
+	]);
 };
