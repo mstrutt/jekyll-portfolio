@@ -1,5 +1,8 @@
 name: MStrutt.co.uk
-markdown: redcarpet
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
 pygments: true
 permalink: /blog/:year/:month/:title/
 category_title_prefix: "Blog posts tagged with: "
