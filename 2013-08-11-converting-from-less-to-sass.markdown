@@ -44,7 +44,7 @@ Replace: `$\1`
 On the assumption that when you `@include` one class inside another, you do it without brackets, where as including a mixin you use the brackets, you can safely replace `@include` with `@extend` to map this to SASS. Although the functionality is slightly different, the resultant styling should be the same.
 
 Find: `@include(\W+[.#][^(;]*;)`
-Replace: `@extend\1
+Replace: `@extend\1`
 
 ### Fixin' the mixin
 
