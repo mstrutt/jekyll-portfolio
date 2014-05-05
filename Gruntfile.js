@@ -128,7 +128,7 @@ module.exports = function (grunt) {
 			},
 			html: {
 				files: ['app/**.html', 'app/**.markdown'],
-				tasks: ['jekyll:development']
+				tasks: ['copy:build', 'jekyll:development']
 			}
 		}
 	});
