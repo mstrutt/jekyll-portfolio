@@ -30,16 +30,27 @@
 		right: 3.125%;
 		height: 50px;
 		width: 50px;
+		padding: 0;
+		border: 0 none;
 		background: $orange;
 		border-radius: 5px;
 		transition: linear .05s;
 		cursor: pointer;
 		overflow: hidden;
 		text-indent: 100%;
+		-webkit-tap-highlight-color: transparent;
 
+		outline: none;
+
+		&:hover,
+		&:focus {
+			background: $deepOrange;
+		}
+		
 		&.open {
 			height: 60px;
 			border-radius: 5px 5px 0 0;
+			background: $orange;
 		}
 
 		&:before {

@@ -5,7 +5,7 @@
   "repository": "git@github.com:mstrutt/jekyll-portfolio.git",
   "main": "_site/index.html",
   "scripts": {
-    "test": "grunt build"
+    "test": "grunt staging"
   },
   "author": "mstrutt",
   "license": "Apache v2",
@@ -21,6 +21,6 @@
     "grunt-contrib-uglify": "~0.3.0",
     "grunt-autoprefixer": "~0.6.4",
     "grunt-match-media": "0.0.5",
-    "grunt-contrib-sass": "~0.6.0"
+    "grunt-sass": "~0.10.0"
   }
 }

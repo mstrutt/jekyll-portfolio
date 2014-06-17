@@ -96,17 +96,23 @@ a {
 	}
 }
 
-.touch p > a {
-	position: relative;
-	
-	&:before {
-		content: "";
-		position: absolute;
-		top: -10px;
-		left: -10px;
-		right: -10px;
-		bottom: -10px;
+%touch-link {
+	> a {
+		position: relative;
+		
+		&:before {
+			content: "";
+			position: absolute;
+			top: -10px;
+			left: -10px;
+			right: -10px;
+			bottom: -10px;
+		}
 	}
+}
+
+.touch p {
+	@extend %touch-link;
 }
 
 .title {
@@ -362,8 +368,32 @@ form {
 
 	.with-sub {
 		cursor: pointer;
+		overflow: hidden;
 		-webkit-tap-highlight-color: transparent;
+		transition: height .2s;
 		transform: translateZ(0);
+
+		&:not(.open) {
+			height: 4.4rem !important;
+		}
+		
+		&:before {
+			content: "+";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 140px;
+			height: 4.4rem;
+			width: 4.4rem;
+			line-height: 4rem;
+			font-size: 3rem;
+			text-align: center;
+			color: $midgrey;
+		}
+
+		&.open:before {
+			content: "-";
+		}
 	}
 }
 
@@ -371,32 +401,6 @@ form {
 	display: block;
 	padding: 0 0 .3rem;
 	margin-top: -0.3rem;
-	overflow: hidden;
-	transition: .2s;
-
-	&:before {
-		content: "+";
-		display: block;
-		position: absolute;
-		top: 0;
-		right: 140px;
-		height: 44px;
-		width: 44px;
-		line-height: 44px;
-		font-size: 30px;
-		text-align: center;
-		color: $midgrey;
-	}
-
-	&.open {
-		&:before {
-			content: "-";
-		}
-	}
-
-	&:not(.open) {
-		height: 0 !important;
-	}
 
 	> li {
 		font-size: 1.4rem;

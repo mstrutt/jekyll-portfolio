@@ -47,7 +47,10 @@
 		margin: 1em 0;
 
 		li {
-			@extend p;
+			@extend %touch-link;
+			
+			font-size: 1.4rem;
+			line-height: 3rem;
 			margin: 0;
 		}
 
@@ -55,5 +58,18 @@
 			list-style-type: circle;
 			margin: 0;
 		}
+	}
+}
+
+code {
+	padding: .1em 0 .2em;
+	border: 1px solid $grey;
+	background: $lightgrey;
+	border-radius: .4em;
+
+	&:before,
+	&:after {
+		content: "\00a0";
+		letter-spacing: -0.2em;
 	}
 }
