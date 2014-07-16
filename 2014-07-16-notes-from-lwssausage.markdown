@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Notes from &#35;lwssausage
+title: Notes from &#35;lwshttp
 preview: My notes from London Web Standards June Event &#35;lwssausage - Bruce's tour of the sausage factory by Bruce Lawson, and Building awesome responsive experiences with JavaScript by Jonathan Fielding.
-date: 2014-07-16 20:59:35
+date: 2014-03-17 21:30:38
 categories:
 - notes
 - lws
