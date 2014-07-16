@@ -10,7 +10,7 @@ categories:
 - typography
 ---
 
-## Browse the web like Xerces - The God King of the Persians [Mike MacCana](https://twitter.com/mikemaccana)
+## Browse the web like Xerces - The God King of the Persians - [Mike MacCana](https://twitter.com/mikemaccana)
 
 - We are creatives, not consumers
 - Shapeshifting wizards are real
@@ -25,7 +25,7 @@ categories:
 	- If something annoys you, change it
 	- Automate the stuff that bores you
 
-## Why is using typography on Web so difficult? [Clare Evans](https://twitter.com/clare_lisbeth)
+## Why is using typography on Web so difficult? - [Clare Evans](https://twitter.com/clare_lisbeth)
 
 - InDesign vs HTML & CSS
 - Old style numbers are more readable and can be achieved with opentype fonts
@@ -38,7 +38,7 @@ categories:
 	- CSS shapes for wrapping text around an image
 	- Google fonts have some novelty font effects that can be added on
 
-## Know Thy Interaction [Ashley Nolan](https://twitter.com/AshNolan_)
+## Know Thy Interaction - [Ashley Nolan](https://twitter.com/AshNolan_)
 
 - Web interaction used to be a lot more limited
 - Interactions shouldn't get in the way of content
