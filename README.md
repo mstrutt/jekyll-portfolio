@@ -16,3 +16,10 @@ npm install
 npm install -g grunt-cli
 gem install jekyll
 ```
+
+## Some grunt commands
+
+- `grunt` - Creates the development environment and sets up a watch task
+- `grunt development` - builds the CSS and HTML, copys other aspects into the build folder
+- `grunt staging` - builds, then adds in asset minification + desktop stylesheet
+- `grunt deploy` - copys staging to live, no deletions
