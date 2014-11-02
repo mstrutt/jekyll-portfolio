@@ -9,6 +9,10 @@ My portfolio / blog ([mstrutt.co.uk](http://mstrutt.co.uk)), built using the Jek
 
 This project relies on the global installation of the ruby gem `jekyll` and the npm package `grunt-cli`
 
+## Posts
+
+For cleanliness (and for better or worse) I decided to place my blogposts in [a separate repository](https://github.com/mstrutt/blog).
+
 ### Suggested install
 
 ```
