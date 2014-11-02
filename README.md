@@ -19,7 +19,14 @@ gem install jekyll
 
 ## Some grunt commands
 
+### Main environment tasks
+
 - `grunt` - Creates the development environment and sets up a watch task
-- `grunt development` - builds the CSS and HTML, copys other aspects into the build folder
-- `grunt staging` - builds, then adds in asset minification + desktop stylesheet
-- `grunt deploy` - copys staging to live, no deletions
+- `grunt development` - Builds the CSS and HTML, copys other aspects into the build folder
+- `grunt staging` - Builds, then adds in asset minification + desktop stylesheet
+- `grunt deploy` - Copys staging to live, no deletions
+
+### Some useful subtasks
+
+- `grunt minify` - Minify all assets, including images
+- `grunt buildcss` - Compile Sass into CSS and automatically adds the right vendor prefixes
