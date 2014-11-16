@@ -394,6 +394,10 @@ form {
 		&.open:before {
 			content: "-";
 		}
+
+		.no-js &:before {
+			content: none;
+		}
 	}
 }
 

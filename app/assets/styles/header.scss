@@ -65,6 +65,10 @@
 			$shadow: 0 3px 0 $white, 0 12px 0 $white, 0 21px 0 $white;
 			box-shadow: $shadow;
 		}
+
+		.no-js & {
+			display: none;
+		}
 	}
 
 	.primary-nav {
@@ -81,7 +85,7 @@
 
 		&.open {
 			opacity: 1;
-			pointer-events: all;
+			pointer-events: default;
 		}
 
 		> a {
@@ -120,6 +124,21 @@
 
 			&.contact:before {
 				background-position: 100% 0;
+			}
+		}
+
+		.no-js & {
+			position: static;
+			opacity: 1;
+			pointer-events: default;
+
+			@media (min-width: 30em) {
+				position: absolute;
+				top: -70px;
+			}
+
+			@media (min-width: 60em) {
+				top: 0;
 			}
 		}
 	}
