@@ -1,6 +1,7 @@
 (function() {
 	var mstrutt = {
 			init: function() {
+				this.jsClass();
 				this.touchTest();
 				this.navicon();
 				this.scrollTop();
@@ -15,6 +16,10 @@
 				twitter: document.getElementById('latest-tweets'),
 				hideCode: document.getElementById('hide-my-code'),
 				skillsList:  document.getElementsByClassName('with-sub')
+			},
+			jsClass: function() {
+				removeClass(document.documentElement, 'no-js');
+				addClass(document.documentElement, 'js');
 			},
 			touchTest: function() {
 				if ("ontouchstart" in window)
@@ -88,6 +93,7 @@
 							e.preventDefault();
 							toggleClass(this, 'open');
 						} else if (e.keyCode === 27) {
+							e.preventDefault();
 							removeClass(this, 'open');
 						}
 					};
@@ -95,6 +101,7 @@
 					list = this.select.skillsList[i];
 					list.style.height = list.offsetHeight+"px";
 					toggleClass(list, 'open');
+					list.setAttribute('tabindex', '0');
 					list.addEventListener('click', toggle);
 					list.addEventListener('keydown', keyToggle);
 				}
