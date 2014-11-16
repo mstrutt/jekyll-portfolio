@@ -123,11 +123,11 @@ module.exports = function (grunt) {
 				tasks: ['buildcss', 'copy:css']
 			},
 			js: {
-				files: ['app/**.js'],
+				files: ['app/**/*.js'],
 				tasks: ['copy:js']
 			},
 			html: {
-				files: ['app/**.html', 'app/**.markdown'],
+				files: ['app/**/*.html', 'app/**/*.markdown'],
 				tasks: ['copy:build', 'jekyll:development']
 			}
 		}
