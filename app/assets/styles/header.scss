@@ -342,7 +342,7 @@
 	}
 
 	@media (max-width: 59.9375em) { // 959px
-		display: none;
+		display: none !important; // to override the inline styles
 	}
 }
 
