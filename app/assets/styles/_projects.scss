@@ -1,0 +1,34 @@
+.project {
+	&__meta {
+
+	}
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1.2em;
+	margin-right: .2em;
+	overflow: hidden;
+	white-space: nowrap;
+		
+	&::before {
+		content: "";
+		display: inline-block;
+		height: 1.2em;
+		width: 1.2em;
+		background-size: 100%;
+	}
+
+	&--code::before {
+		background-image: url(/assets/images/icons/code.svg);
+	}
+
+	&--github::before {
+		background-image: url(/assets/images/icons/github.svg);
+	}
+
+	&--link::before {
+		background-image: url(/assets/images/icons/link.svg);
+	}
+}
