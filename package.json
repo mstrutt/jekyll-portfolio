@@ -23,7 +23,7 @@
     "grunt-jekyll": "~0.4.1",
     "grunt-match-media": "0.0.5",
     "grunt-phantomcss": "git://github.com/clarkeadg/grunt-phantomcss",
-    "grunt-sass": "~0.10.0",
+    "grunt-sass": "~0.18.0",
     "grunt-usemin": "~2.0.2",
     "load-grunt-tasks": "^3.1.0",
     "time-grunt": "^1.1.0"

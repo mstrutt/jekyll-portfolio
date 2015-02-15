@@ -30,7 +30,8 @@ module.exports = function (grunt) {
 				src: [
 					'**',
 					'!assets/styles/**',
-					'!assets/images/**'
+					'!assets/images/**',
+					'assets/images/icons/*'
 				],
 				dest: '<%= config.temp %>'
 			},
