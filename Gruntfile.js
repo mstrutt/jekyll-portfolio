@@ -174,9 +174,4 @@ module.exports = function (grunt) {
 		'minify',
 		'jekyll:staging'
 	]);
-
-	grunt.registerTask('deploy', [
-		'staging',
-		'copy:deploy'
-	]);
 };

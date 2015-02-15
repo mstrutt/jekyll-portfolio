@@ -28,7 +28,6 @@ gem install jekyll
 - `grunt` - Creates the development environment and sets up a watch task
 - `grunt development` - Builds the CSS and HTML, copys other aspects into the build folder
 - `grunt staging` - Builds, then adds in asset minification + desktop stylesheet
-- `grunt deploy` - Copys staging to live, no deletions
 
 ### Some useful subtasks
 
