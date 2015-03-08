@@ -48,8 +48,6 @@ $deepOrange: #F77913;
 
 /* Typography */
 
-@import "fonts";
-
 $fontLora: 'Lora', serif;
 $fontOpenSans: 'Open Sans', sans-serif;
 $fontEnriqueta: 'Enriqueta', serif;
@@ -494,6 +492,9 @@ form {
 .read-more:after {
 	content: " >";
 }
+
+/* Modules */
+@import "modules/navigation";
 
 /* Media Queries */
 @import "media-queries";

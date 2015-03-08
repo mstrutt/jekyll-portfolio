@@ -56,11 +56,6 @@
 			}
 		}
 	}
-
-	.header .primary-nav {
-		width: 360px;
-		right: 0;
-	}
 }
 
 @media (min-width: 40em) { // 640px
@@ -106,33 +101,6 @@
 		border-top: 0 none;
 		border-radius: 0 10px 0 0;
 
-		.primary-nav {
-			opacity: 1;
-			pointer-events: all;
-			display: block;
-			position: absolute;
-			top: 0;
-			right: 100%;
-			width: 90px;
-			z-index: -1;
-			box-shadow: none;
-
-			> a {
-				position: relative;
-				display: block;
-				width: auto;
-				margin: 0 0 1rem;
-				padding: 12% 0;
-				border-radius: 5px 0 0 5px;
-				box-shadow: inset -10px 0 10px -10px rgba(0,0,0,.15);
-
-				&:before {
-					width: 66%;
-					padding: 0 0 54%;
-				}
-			}
-		}
-
 		.logo {
 			top: -28px;
 			left: auto;
@@ -157,10 +125,6 @@
 			line-height: 130px;
 			font-size: 54px;
 		}
-	}
-
-	.navicon {
-		display: none;
 	}
 
 	.main {
