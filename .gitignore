@@ -5,3 +5,5 @@ live
 **.sass-cache
 node_modules
 **.css
+npm-debug.log
+
