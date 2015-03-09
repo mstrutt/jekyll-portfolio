@@ -20,6 +20,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-jekyll": "~0.4.1",
     "grunt-match-media": "0.0.5",
+    "grunt-phantomcss": "git://github.com/clarkeadg/grunt-phantomcss",
     "grunt-sass": "~0.10.0",
     "grunt-usemin": "~2.0.2"
   }
