@@ -1,0 +1,45 @@
+{
+	"env": {
+		"browser": true
+	},
+	"rules": {
+		"quotes": 0,
+		"camelcase": 0,
+		"curly": 1,
+		"strict": 0,
+
+		"eol-last": 0,
+		"no-console": 1,
+
+		"block-scoped-var": 2,
+		"no-reserved-keys": 2,
+		"no-else-return": 2,
+		"no-eq-null": 1,
+		"no-floating-decimal": 1,
+		"no-self-compare": 1,
+		"no-void": 1,
+		"radix": 2,
+		"vars-on-top": 2,
+		"wrap-iife": [2, "never"],
+		"no-undefined": 2,
+		"brace-style": [2, "1tbs"],
+		"comma-style": [2, "last"],
+		"no-lonely-if": 2,
+		"no-multiple-empty-lines": 2,
+		"no-nested-ternary": 2,
+		"operator-assignment": [2, "always"],
+		"space-after-keywords": [2, "always"],
+		"space-before-blocks": [2, "always"],
+		"space-before-function-parentheses": [2, {
+			"anonymous": "never",
+			"named": "always"
+		}],
+		"space-in-brackets": [2, "never"],
+		"space-in-parens": [2, "never"],
+		"spaced-line-comment": [2, "always"],
+		"indent": [2, "tab"],
+		"space-unary-ops": [2, {
+			"words": true
+		}]
+	}
+}

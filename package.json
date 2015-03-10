@@ -5,7 +5,7 @@
   "repository": "git@github.com:mstrutt/jekyll-portfolio.git",
   "main": "_site/index.html",
   "scripts": {
-    "test": "grunt staging"
+    "test": "grunt test && grunt staging"
   },
   "author": "mstrutt",
   "license": "Apache v2",
@@ -18,6 +18,7 @@
     "grunt-contrib-imagemin": "^0.9.3",
     "grunt-contrib-uglify": "~0.3.0",
     "grunt-contrib-watch": "~0.5.3",
+    "grunt-eslint": "^8.0.0",
     "grunt-jekyll": "~0.4.1",
     "grunt-match-media": "0.0.5",
     "grunt-phantomcss": "git://github.com/clarkeadg/grunt-phantomcss",

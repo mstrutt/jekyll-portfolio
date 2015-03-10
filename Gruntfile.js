@@ -174,6 +174,13 @@ module.exports = function (grunt) {
 				]
 			}
 		},
+		eslint: {
+			app: {
+				src: [
+					'app/assets/scripts/*.js'
+				]
+			}
+		},
 		watch: {
 			css: {
 				files: [
@@ -184,7 +191,7 @@ module.exports = function (grunt) {
 			},
 			js: {
 				files: ['app/**/*.js'],
-				tasks: ['copy:js']
+				tasks: ['eslint', 'copy:js']
 			},
 			html: {
 				files: ['app/**/*.html', 'app/**/*.markdown'],
@@ -204,6 +211,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.loadNpmTasks('grunt-match-media');
 	grunt.loadNpmTasks('grunt-phantomcss');
+	grunt.loadNpmTasks('grunt-eslint');
 
 	grunt.registerTask('default', ['development', 'watch']);
 
@@ -235,4 +243,6 @@ module.exports = function (grunt) {
 		'minify',
 		'jekyll:staging'
 	]);
+
+	grunt.registerTask('test', ['eslint']);
 };
