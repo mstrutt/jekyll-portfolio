@@ -117,14 +117,81 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		phantomcss: {
+			x_small: {
+				options: {
+					screenshots: 'tests/visual/x-small/',
+					results: 'results/visual/x-small/',
+					viewportSize: [320, 480]
+				},
+				src: [
+					'tests/visual/init.js',
+					'tests/visual/spec/*.js'
+				]
+			},
+			small: {
+				options: {
+					screenshots: 'tests/visual/small/',
+					results: 'results/visual/small/',
+					viewportSize: [480, 768]
+				},
+				src: [
+					'tests/visual/init.js',
+					'tests/visual/spec/*.js'
+				]
+			},
+			medium: {
+				options: {
+					screenshots: 'tests/visual/medium/',
+					results: 'results/visual/medium/',
+					viewportSize: [768, 1024]
+				},
+				src: [
+					'tests/visual/init.js',
+					'tests/visual/spec/*.js'
+				]
+			},
+			large: {
+				options: {
+					screenshots: 'tests/visual/large/',
+					results: 'results/visual/large/',
+					viewportSize: [1024, 768]
+				},
+				src: [
+					'tests/visual/init.js',
+					'tests/visual/spec/*.js'
+				]
+			},
+			x_large: {
+				options: {
+					screenshots: 'tests/visual/x-large/',
+					results: 'results/visual/x-large/',
+					viewportSize: [1920, 1080]
+				},
+				src: [
+					'tests/visual/init.js',
+					'tests/visual/spec/*.js'
+				]
+			}
+		},
+		eslint: {
+			app: {
+				src: [
+					'app/assets/scripts/*.js'
+				]
+			}
+		},
 		watch: {
 			css: {
-				files: ['app/assets/styles/**.scss'],
+				files: [
+					'app/assets/styles/*.scss',
+					'app/assets/styles/modules/*.scss'
+				],
 				tasks: ['buildcss', 'copy:css']
 			},
 			js: {
 				files: ['app/**/*.js'],
-				tasks: ['copy:js']
+				tasks: ['eslint', 'copy:js']
 			},
 			html: {
 				files: ['app/**/*.html', 'app/**/*.markdown'],
@@ -143,6 +210,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-usemin');
 	grunt.loadNpmTasks('grunt-jekyll');
 	grunt.loadNpmTasks('grunt-match-media');
+	grunt.loadNpmTasks('grunt-phantomcss');
+	grunt.loadNpmTasks('grunt-eslint');
 
 	grunt.registerTask('default', ['development', 'watch']);
 
@@ -174,4 +243,6 @@ module.exports = function (grunt) {
 		'minify',
 		'jekyll:staging'
 	]);
+
+	grunt.registerTask('test', ['eslint']);
 };
