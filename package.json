@@ -5,7 +5,7 @@
   "repository": "git@github.com:mstrutt/jekyll-portfolio.git",
   "main": "_site/index.html",
   "scripts": {
-    "test": "grunt test && grunt staging"
+    "test": "grunt test && grunt dist"
   },
   "author": "mstrutt",
   "license": "Apache v2",
