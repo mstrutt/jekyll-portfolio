@@ -3,7 +3,7 @@ npm-debug.log
 
 .tmp
 build
-staging
+dist
 results
 
 **.css

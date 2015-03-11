@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 		app: 'app',
 		temp: '.tmp',
 		build: 'build',
-		dist: 'staging'
+		dist: 'dist'
 	};
 
 	grunt.initConfig({
@@ -122,13 +122,13 @@ module.exports = function (grunt) {
 			options: {
 				config: '_config.yml'
 			},
-			development: {
+			build: {
 				options: {
 					src : '<%= config.temp %>',
 					dest: '<%= config.build %>'
 				}
 			},
-			staging: {
+			dist: {
 				options: {
 					src: '<%= config.temp %>',
 					dest: '<%= config.dist %>'
@@ -190,10 +190,30 @@ module.exports = function (grunt) {
 			}
 		},
 
+		connect: {
+			build: {
+				options: {
+					port: 9000,
+					livereload: true,
+					open: true,
+					base: '<%= config.build %>'
+				}
+			},
+			dist: {
+				options: {
+					port: 9001,
+					base: '<%= config.dist %>'
+				}
+			}
+		},
+
 		watch: {
+			options: {
+				livereload: true
+			},
 			css: {
 				files: ['<%= config.app %>/assets/styles/{,*/}*.scss'],
-				tasks: ['buildcss', 'copy:css']
+				tasks: ['build:css', 'copy:css']
 			},
 			js: {
 				files: ['<%= config.app %>/assets/scripts/{,*/}*.js'],
@@ -201,41 +221,59 @@ module.exports = function (grunt) {
 			},
 			html: {
 				files: ['<%= config.app %>/{,*/}*.{html,markdown}'],
-				tasks: ['copy:temp', 'jekyll:development']
+				tasks: ['copy:temp', 'jekyll:build']
 			}
 		}
 	});
 
-	grunt.registerTask('default', ['development', 'watch']);
+	grunt.registerTask('default', ['serve']);
 
-	grunt.registerTask('buildcss', ['sass', 'autoprefixer']);
-	grunt.registerTask('minify', [
-		'useminPrepare',
-		'uglify',
-		'cssmin',
-		'usemin',
-	]);
+	grunt.registerTask('build', 'Build the site, nothing fancy, no minification', function(target) {
+		var tasks = {
+			prep: ['clean', 'copy:temp'],
+			css: ['sass', 'autoprefixer'],
+			minify: [
+				'useminPrepare',
+				'uglify',
+				'cssmin',
+				'usemin',
+			],
+			default: [
+				'build:prep',
+				'copy:images',
+				'build:css',
+				'jekyll:build'
+			]
+		};
 
-	grunt.registerTask('development', [
-		'clean',
-		'copy:temp',
-		'copy:images',
-		'buildcss',
-		'jekyll:development'
-	]);
+		grunt.task.run(tasks[target] || tasks['default']);
+	});
 
-	grunt.registerTask('staging', [
-		'clean',
-		'copy:temp',
-		/** /
-			'copy:images'/*/
-			'imagemin'
-		/**/,
-		'buildcss',
+	grunt.registerTask('dist', [
+		'build:prep',
+		'imagemin',
+		'build:css',
 		'match_media',
-		'minify',
-		'jekyll:staging'
+		'build:minify',
+		'jekyll:dist'
 	]);
+
+	grunt.registerTask('serve', 'Builds the site, starts a simple node server', function (target) {
+		var tasks = {
+			dist: [
+				'dist',
+				'connect:dist',
+				'watch'
+			],
+			default: [
+				'build',
+				'connect:build',
+				'watch'
+			]
+		};
+
+		grunt.task.run(tasks[target] || tasks['default']);
+	});
 
 	grunt.registerTask('test', ['eslint']);
 };
