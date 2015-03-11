@@ -1,9 +1,9 @@
-build
-development
-staging
-live
-**.sass-cache
 node_modules
-**.css
 npm-debug.log
+
+.tmp
+build
+dist
 results
+
+**.css

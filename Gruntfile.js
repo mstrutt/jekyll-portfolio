@@ -1,81 +1,104 @@
 module.exports = function (grunt) {
+	// Time how long tasks take. Can help when optimizing build times
+	require('time-grunt')(grunt);
+
+	// Load grunt tasks automatically
+	require('load-grunt-tasks')(grunt);
+
+	// Configurable paths
+	var config = {
+		app: 'app',
+		temp: '.tmp',
+		build: 'build',
+		dist: 'dist'
+	};
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+
+		config: config,
+
 		clean: {
-			build: ['build'],
-			development: ['development'],
-			staging: ['staging']
+			temp: ['<%= config.temp %>'],
+			build: ['<%= config.build %>']
 		},
+
 		copy: {
-			build: {
+			temp: {
 				expand: true,
-				cwd: 'app',
+				cwd: '<%= config.app %>',
 				src: [
 					'**',
-					// '!assets/scripts/**',
 					'!assets/styles/**',
 					'!assets/images/**'
 				],
-				dest: 'build'
+				dest: '<%= config.temp %>'
 			},
 			images: {
 				expand: true,
-				cwd: 'app',
+				cwd: '<%= config.app %>',
 				src: ['**/*.{png,jpg,gif}'],
-				dest: 'build'
-			},
-			js: {
-				expand: true,
-				cwd: 'app',
-				src: ['assets/scripts/**'],
-				dest: 'development'
+				dest: '<%= config.temp %>'
 			},
 			css: {
 				expand: true,
-				cwd: 'build',
+				cwd: '<%= config.temp %>',
 				src: ['assets/styles/**.css'],
-				dest: 'development'	
+				dest: '<%= config.build %>'
 			},
-			deploy: {
+			js: {
 				expand: true,
-				cwd: 'staging',
-				src: ['**'],
-				dest: 'live'
+				cwd: '<%= config.app %>',
+				src: ['assets/scripts/**'],
+				dest: '<%= config.build %>'
 			}
 		},
+
 		sass: {
 			build: {
 				files: {
-					'build/assets/styles/site.css': 'app/assets/styles/site.scss'
+					'<%= config.temp %>/assets/styles/site.css': '<%= config.app %>/assets/styles/site.scss'
 				}
 			}
 		},
+
 		autoprefixer: {
 			options: {
 				browsers: ['last 3 version']
 			},
 			main: {
-				src: 'build/assets/styles/site.css',
-				dest: 'build/assets/styles/site.css'
+				src: '<%= config.temp %>/assets/styles/site.css',
+				dest: '<%= config.temp %>/assets/styles/site.css'
 			}
 		},
+
+		match_media: {
+			desktop: {
+				files: {
+					'<%= config.temp %>/assets/styles/desktop.css': ['<%= config.temp %>/assets/styles/site.css']
+				}
+			}
+		},
+
 		imagemin: {
 			build: {
 				files: [{
 					expand: true,
-					cwd: 'app',
+					cwd: '<%= config.app %>',
 					src: ['**/*.{png,jpg,gif}'],
-					dest: 'build'
+					dest: '<%= config.temp %>'
 				}]
 			}
 		},
+
 		uglify: {
 			options: {
 				garbled: false
 			}
 		},
+
 		useminPrepare: {
-			html: 'build/_layouts/page.html',
+			html: '<%= config.temp %>/_layouts/page.html',
 			options: {
 				flow: {
 					html: {
@@ -86,37 +109,33 @@ module.exports = function (grunt) {
 						post: {}
 					}
 				},
-				root: 'build',
-				dest: 'build'
+				root: '<%= config.temp %>',
+				dest: '<%= config.temp %>'
 			}
 		},
+
 		usemin: {
-			html: 'build/_layouts/page.html'
+			html: '<%= config.temp %>/_layouts/page.html'
 		},
+
 		jekyll: {
 			options: {
 				config: '_config.yml'
 			},
-			development: {
+			build: {
 				options: {
-					src : 'build',
-					dest: 'development'
+					src : '<%= config.temp %>',
+					dest: '<%= config.build %>'
 				}
 			},
-			staging: {
+			dist: {
 				options: {
-					src: 'build',
-					dest: 'staging'
+					src: '<%= config.temp %>',
+					dest: '<%= config.dist %>'
 				}
 			}
 		},
-		match_media: {
-			desktop: {
-				files: {
-					'build/assets/styles/desktop.css': ['build/assets/styles/site.css']
-				}
-			}
-		},
+
 		phantomcss: {
 			x_small: {
 				options: {
@@ -135,10 +154,7 @@ module.exports = function (grunt) {
 					results: 'results/visual/small/',
 					viewportSize: [480, 768]
 				},
-				src: [
-					'tests/visual/init.js',
-					'tests/visual/spec/*.js'
-				]
+				src: '<%= phantomcss.x_small.src %>'
 			},
 			medium: {
 				options: {
@@ -146,10 +162,7 @@ module.exports = function (grunt) {
 					results: 'results/visual/medium/',
 					viewportSize: [768, 1024]
 				},
-				src: [
-					'tests/visual/init.js',
-					'tests/visual/spec/*.js'
-				]
+				src: '<%= phantomcss.x_small.src %>'
 			},
 			large: {
 				options: {
@@ -157,10 +170,7 @@ module.exports = function (grunt) {
 					results: 'results/visual/large/',
 					viewportSize: [1024, 768]
 				},
-				src: [
-					'tests/visual/init.js',
-					'tests/visual/spec/*.js'
-				]
+				src: '<%= phantomcss.x_small.src %>'
 			},
 			x_large: {
 				options: {
@@ -168,81 +178,102 @@ module.exports = function (grunt) {
 					results: 'results/visual/x-large/',
 					viewportSize: [1920, 1080]
 				},
-				src: [
-					'tests/visual/init.js',
-					'tests/visual/spec/*.js'
-				]
+				src: '<%= phantomcss.x_small.src %>'
 			}
 		},
+
 		eslint: {
 			app: {
 				src: [
-					'app/assets/scripts/*.js'
+					'<%= config.app %>/assets/scripts/*.js'
 				]
 			}
 		},
+
+		connect: {
+			build: {
+				options: {
+					port: 9000,
+					livereload: true,
+					open: true,
+					base: '<%= config.build %>'
+				}
+			},
+			dist: {
+				options: {
+					port: 9001,
+					base: '<%= config.dist %>'
+				}
+			}
+		},
+
 		watch: {
+			options: {
+				livereload: true
+			},
 			css: {
-				files: [
-					'app/assets/styles/*.scss',
-					'app/assets/styles/modules/*.scss'
-				],
-				tasks: ['buildcss', 'copy:css']
+				files: ['<%= config.app %>/assets/styles/{,*/}*.scss'],
+				tasks: ['build:css', 'copy:css']
 			},
 			js: {
-				files: ['app/**/*.js'],
+				files: ['<%= config.app %>/assets/scripts/{,*/}*.js'],
 				tasks: ['eslint', 'copy:js']
 			},
 			html: {
-				files: ['app/**/*.html', 'app/**/*.markdown'],
-				tasks: ['copy:build', 'jekyll:development']
+				files: ['<%= config.app %>/{,*/}*.{html,markdown}'],
+				tasks: ['copy:temp', 'jekyll:build']
 			}
 		}
 	});
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-usemin');
-	grunt.loadNpmTasks('grunt-jekyll');
-	grunt.loadNpmTasks('grunt-match-media');
-	grunt.loadNpmTasks('grunt-phantomcss');
-	grunt.loadNpmTasks('grunt-eslint');
 
-	grunt.registerTask('default', ['development', 'watch']);
+	grunt.registerTask('default', ['serve']);
 
-	grunt.registerTask('buildcss', ['sass', 'autoprefixer']);
-	grunt.registerTask('minify', [
-		'useminPrepare',
-		'uglify',
-		'cssmin',
-		'usemin',
-	]);
+	grunt.registerTask('build', 'Build the site, nothing fancy, no minification', function(target) {
+		var tasks = {
+			prep: ['clean', 'copy:temp'],
+			css: ['sass', 'autoprefixer'],
+			minify: [
+				'useminPrepare',
+				'uglify',
+				'cssmin',
+				'usemin',
+			],
+			default: [
+				'build:prep',
+				'copy:images',
+				'build:css',
+				'jekyll:build'
+			]
+		};
 
-	grunt.registerTask('development', [
-		'clean:build',
-		'copy:build',
-		'copy:images',
-		'buildcss',
-		'jekyll:development'
-	]);
+		grunt.task.run(tasks[target] || tasks['default']);
+	});
 
-	grunt.registerTask('staging', [
-		'clean:build',
-		'copy:build',
-		/** /
-			'copy:images'/*/
-			'imagemin'
-		/**/,
-		'buildcss',
+	grunt.registerTask('dist', [
+		'build:prep',
+		'imagemin',
+		'build:css',
 		'match_media',
-		'minify',
-		'jekyll:staging'
+		'build:minify',
+		'jekyll:dist'
 	]);
+
+	grunt.registerTask('serve', 'Builds the site, starts a simple node server', function (target) {
+		var tasks = {
+			dist: [
+				'dist',
+				'connect:dist',
+				'watch'
+			],
+			default: [
+				'build',
+				'connect:build',
+				'watch'
+			]
+		};
+
+		grunt.task.run(tasks[target] || tasks['default']);
+	});
 
 	grunt.registerTask('test', ['eslint']);
 };

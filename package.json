@@ -5,7 +5,7 @@
   "repository": "git@github.com:mstrutt/jekyll-portfolio.git",
   "main": "_site/index.html",
   "scripts": {
-    "test": "grunt test && grunt staging"
+    "test": "grunt test && grunt dist"
   },
   "author": "mstrutt",
   "license": "Apache v2",
@@ -13,6 +13,7 @@
     "grunt": "~0.4.2",
     "grunt-autoprefixer": "~0.6.4",
     "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "^0.9.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-imagemin": "^0.9.3",
@@ -23,6 +24,8 @@
     "grunt-match-media": "0.0.5",
     "grunt-phantomcss": "git://github.com/clarkeadg/grunt-phantomcss",
     "grunt-sass": "~0.10.0",
-    "grunt-usemin": "~2.0.2"
+    "grunt-usemin": "~2.0.2",
+    "load-grunt-tasks": "^3.1.0",
+    "time-grunt": "^1.1.0"
   }
 }
