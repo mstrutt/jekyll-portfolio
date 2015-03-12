@@ -1,4 +1,4 @@
-casper.thenOpen('http://mstrutt.dev/')
+casper.thenOpen('http://localhost:9000/')
 	.then(function() {
 		phantomcss.screenshot('html', 'homepage--default');
 	})
