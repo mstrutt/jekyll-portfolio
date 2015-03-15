@@ -61,15 +61,40 @@
 	}
 }
 
-code {
-	padding: .1em 0 .2em;
+blockquote {
+	padding: 0 1em;
+	margin-left: 0;
+	border-left: 4px solid $grey;
+}
+
+%code {
 	border: 1px solid $grey;
-	background: $lightgrey;
 	border-radius: .4em;
+	background: $lightgrey;
+}
+
+code {
+	@extend %code;
+	padding: .1em 0 .2em;
 
 	&:before,
 	&:after {
 		content: "\00a0";
 		letter-spacing: -0.2em;
+	}
+}
+
+pre {
+	@extend %code;
+	padding: .75em 1em;
+
+	> code {
+		display: block;
+		border: 0 none;
+
+		&:before,
+		&:after {
+			content: none;
+		}
 	}
 }
