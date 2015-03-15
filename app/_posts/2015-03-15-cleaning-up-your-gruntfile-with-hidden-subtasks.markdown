@@ -28,7 +28,7 @@ This defines one place for this step to me managed from, creates some other prob
 
 ### Target to the rescue
 
-Grunt has this concept of targets, where a task can have many parts to it in the configuration, which can be selected individually by their target name. If a no target is specified, then all parts are run. Running `grunt --help` wont list the available targets of a task, only the top level tasks available, this essentially makes the targets like the "hidden tasks", which that many have asked for to be included in grunt.
+Grunt has this concept of targets, where a task can have many parts to it in the configuration, which can be selected individually by their target name. If no target is specified, then all parts are run. Running `grunt --help` wont list the available targets of a task, only the top level tasks available, this essentially makes the targets like the "hidden tasks", that many have asked for to be included in grunt.
 
 When registering a task, a longer form can be used which allows writing a function which accepts the target as an argument. In its simplest form, this looks like:
 
@@ -86,7 +86,7 @@ grunt.registerTask('task-name', 'Description of the task', function(target) {
 });
 ```
 
-This runs the specified target if it matches one of the keys or our `tasks` object, and if not target is specified, or one doesn't match, then the default task is run. The default tasks is where the full process should happen, and should contain all the other parts plus more.
+This runs the specified target if it matches one of the keys or our `tasks` object, and if no target is specified, or one doesn't match, then the default task is run. The default tasks is where the full process should happen, and should contain all the other parts plus more.
 
 ### The end result
 
