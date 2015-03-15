@@ -34,12 +34,16 @@
 		if (this.select.skillsList.length) {
 			this.skillsList();
 		}
+		if (this.select.githubFeed !== null) {
+			this.githubFeed();
+		}
 	};
 
 	site.select = {
 		twitter: document.getElementById('latest-tweets'),
 		hideCode: document.getElementById('hide-my-code'),
-		skillsList: document.getElementsByClassName('with-sub')
+		skillsList: document.getElementsByClassName('with-sub'),
+		githubFeed: document.getElementById('github-feed')
 	};
 
 	site.jsClass = function() {
@@ -136,6 +140,33 @@
 			list.addEventListener('click', toggle);
 			list.addEventListener('keydown', keyToggle);
 		}
+	};
+
+	site.githubFeed = function() {
+		var self = this,
+			req = new XMLHttpRequest();
+
+		function onSuccess (data) {
+			self.select.twitter.innerHTML = JSON.parse(data).map(function(activity) {
+				return '<li>' + activity.type + ': ' + activity.reop.name;
+			}).join('');
+		}
+
+		function onError () {
+			// On fail remove section
+			self.select.githubFeed.className += ' is-hidden';
+		}
+
+		req.onreadystatechange = function() {
+			if (req.readyState === 4 && req.status === 200) {
+				onSuccess(req.responseText);
+			} else if (req.readyState === 4) {
+				onError();
+			}
+		};
+
+		req.open('GET', 'https://api.github.com/users/mstrutt/events', true);
+		req.send();
 	};
 
 	site.scrollTop = function() {
