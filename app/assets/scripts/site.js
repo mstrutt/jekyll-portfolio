@@ -20,6 +20,25 @@
 		}
 	}
 
+	function uppercaseFirstLetter (text) {
+		return text.charAt(0).toUpperCase() + text.slice(1);
+	}
+
+	function ajaxRequest (request) {
+		var req = new XMLHttpRequest();
+
+		req.onreadystatechange = function() {
+			if (req.readyState === 4 && req.status === 200) {
+				request.success(JSON.parse(req.responseText));
+			} else if (req.readyState === 4) {
+				request.error();
+			}
+		};
+
+		req.open(request.method || 'GET', request.url, true);
+		req.send();
+	}
+
 	site.init = function() {
 		this.jsClass();
 		this.touchTest();
@@ -67,41 +86,26 @@
 	};
 
 	site.twitter = function() {
-		// Twitter feed
-		var self = this,
-			req = new XMLHttpRequest();
-
-		function onSuccess (data) {
-			var tweets = JSON.parse(data),
-				output = '',
-				i = 0;
-
-			for (; i < tweets.length && i < 5; i++) {
-				output += '<li>' + tweets[i]
-					.replace(/(http(s*):\/\/(t.co\/[a-zA-z0-9]*))/g, '<a href="$1">$3</a>')
-					.replace(/(@([a-z*A-Z*_*0-9*]*))/g, '<a href="http://twitter.com/$2">$1</a>')
-					.replace(/#([a-zA-Z0-9\.\/-_+=?&\~\']*)/g, '<a href="http://twitter.com/search/%23$1">#$1</a>');
+		var self = this;
+		ajaxRequest({
+			url: '//mstrutt.co.uk:8080/tweets.json',
+			success: function(tweets) {
+				self.select.twitter.innerHTML = tweets
+					.slice(0, 5)
+					.map(function(tweet) {
+						return '<li>' + tweet
+							.replace(/(http(s*):\/\/(t.co\/[a-zA-z0-9]*))/g, '<a href="$1">$3</a>')
+							.replace(/(@([a-z*A-Z*_*0-9*]*))/g, '<a href="http://twitter.com/$2">$1</a>')
+							.replace(/#([a-zA-Z0-9\.\/-_+=?&\~\']*)/g, '<a href="http://twitter.com/search/%23$1">#$1</a>');
+					})
+					.join('');
+			},
+			error: function() {
+				// On fail remove section
+				self.select.twitter.className += ' is-hidden';
+				document.getElementById('latest-tweets-heading').className += ' is-hidden';
 			}
-
-			self.select.twitter.innerHTML = output;
-		}
-
-		function onError () {
-			// On fail remove section
-			self.select.twitter.className += ' is-hidden';
-			document.getElementById('latest-tweets-heading').className += ' is-hidden';
-		}
-
-		req.onreadystatechange = function() {
-			if (req.readyState === 4 && req.status === 200) {
-				onSuccess(req.responseText);
-			} else if (req.readyState === 4) {
-				onError();
-			}
-		};
-
-		req.open('GET', '//mstrutt.co.uk:8080/tweets.json', true);
-		req.send();
+		});
 	};
 
 	site.hideCode = function() {
@@ -119,19 +123,22 @@
 	};
 
 	site.skillsList = function() {
-		var list, i,
-			toggle = function() {
+		var list, i;
+
+		function toggle () {
+			toggleClass(this, 'open');
+		}
+
+		function keyToggle (e) {
+			if (e.keyCode === 13 || e.keyCode === 32) {
+				e.preventDefault();
 				toggleClass(this, 'open');
-			},
-			keyToggle = function(e) {
-				if (e.keyCode === 13 || e.keyCode === 32) {
-					e.preventDefault();
-					toggleClass(this, 'open');
-				} else if (e.keyCode === 27) {
-					e.preventDefault();
-					removeClass(this, 'open');
-				}
-			};
+			} else if (e.keyCode === 27) {
+				e.preventDefault();
+				removeClass(this, 'open');
+			}
+		}
+
 		for (i = 0; i < this.select.skillsList.length; i++) {
 			list = this.select.skillsList[i];
 			list.style.height = list.offsetHeight + 'px';
@@ -144,29 +151,49 @@
 
 	site.githubFeed = function() {
 		var self = this,
-			req = new XMLHttpRequest();
+			activityTitle = {
+				PushEvent: function(activity) {
+					return 'Pushed <strong>' + activity.payload.commits.length + ' commit' + (activity.payload.commits.length > 1 ? 's' : '') + '</strong> to';
+				},
+				CreateEvent: function() {
+					return 'Created a new repo:';
+				},
+				// IssuesEvent
+				// IssueCommentEvent
+				PullRequestEvent: function(activity) {
+					return '<strong>' + uppercaseFirstLetter(activity.payload.action) + '</strong> <a href="' + activity.payload.pull_request.html_url + '">' + activity.payload.pull_request.title + '</a> of';
+				},
+				generic: function(activity) {
+					// return 'Worked on';
+					return activity.type;
+				}
+			};
+		ajaxRequest({
+			url: 'https://api.github.com/users/mstrutt/events',
+			success: function(feed) {
+				self.select.githubFeed.innerHTML = feed
+					.map(function(activity) {
+						var item = '<li>';
 
-		function onSuccess (data) {
-			self.select.twitter.innerHTML = JSON.parse(data).map(function(activity) {
-				return '<li>' + activity.type + ': ' + activity.reop.name;
-			}).join('');
-		}
+						item += (activityTitle[activity.type] || activityTitle.generic)(activity);
 
-		function onError () {
-			// On fail remove section
-			self.select.githubFeed.className += ' is-hidden';
-		}
+						// Adding repo name
+						item += ' <a href="' + activity.repo.url + '">' + activity.repo.name + '</a>';
 
-		req.onreadystatechange = function() {
-			if (req.readyState === 4 && req.status === 200) {
-				onSuccess(req.responseText);
-			} else if (req.readyState === 4) {
-				onError();
+						// Branch name if appropriate
+						if (activity.payload.ref) {
+							item += ' at <strong>' + activity.payload.ref.replace('refs/heads/', '') + '</strong>';
+						}
+
+						return item;
+					})
+					.join('');
+			},
+			error: function() {
+				// On fail remove section
+				self.select.githubFeed.className += ' is-hidden';
 			}
-		};
-
-		req.open('GET', 'https://api.github.com/users/mstrutt/events', true);
-		req.send();
+		});
 	};
 
 	site.scrollTop = function() {
