@@ -36,7 +36,7 @@ Since making the decision to use SASS over LESS as my pre-processor of choice, I
 
 The only different between variables in LESS and variables in SASS is the character they use, so we the exception of the CSS reserved word `@media` and the LESS reserved word `@include`, you can just swap the `@` character for the `$` character.
 
-Find: `@((?!media|include)[a-zA-Z_]*)`
+Find: `@((?!media|include|charset|document|font-face|import|keyframes|page|supports)[a-zA-Z_]+)`
 Replace: `$\1`
 
 ### Replacing includes with extends
