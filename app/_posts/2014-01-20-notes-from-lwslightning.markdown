@@ -13,7 +13,7 @@ categories:
 - ecommerce
 ---
 
-##Architecting for success - [Daniel Knell](https://twitter.com/danielknell)
+## Architecting for success - [Daniel Knell](https://twitter.com/danielknell)
 - Architect - primary deliverable is quality
 	- Code
 	- Process
@@ -37,12 +37,12 @@ categories:
 		- Grunt!
 - Keep Learning!
 
-##ISNI and Linked Data - [Laura Dawson]( https://twitter.com/ljndawson)
+## ISNI and Linked Data - [Laura Dawson]( https://twitter.com/ljndawson)
 - Contributors to content creators
 - API with content creation profile
 - You may already have one
 
-##User Experience vs Learning Technology - [Leonard Houx](https://twitter.com/leonardhoux)
+## User Experience vs Learning Technology - [Leonard Houx](https://twitter.com/leonardhoux)
 - Welcome to Academia
 - Digital Natives
 	- The internet generation have "brains full of internet"
@@ -61,7 +61,7 @@ categories:
 - Accept your users
 - Make learning *feel* better
 
-##Mobile UX Patterns for eCommerce - [Fabio Bertone](https://twitter.com/fabiobeta)
+## Mobile UX Patterns for eCommerce - [Fabio Bertone](https://twitter.com/fabiobeta)
 - Don't just look at the "best" sites, look at the relevant ones
 - Login / Register is the main pinpoint
 	- Workout if user needs to login or register by analytics
@@ -71,7 +71,7 @@ categories:
 - Springboards are dead
 - Different site behaviours for different user behaviours
 
-##What is capability URL and why do I care? - [Daniel Appelquist](https://twitter.com/torgo)
+## What is capability URL and why do I care? - [Daniel Appelquist](https://twitter.com/torgo)
 - Cool URLs don't change, but not all URLs are cool
 - No login required and easy to pass on
 - URLs weren't designed to be secret

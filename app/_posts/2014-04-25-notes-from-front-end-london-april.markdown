@@ -10,7 +10,7 @@ categories:
 - sass
 ---
 
-##The world keeps spinning round and round - [Arran Ross-Paterson](https://twitter.com/arranrp)
+## The world keeps spinning round and round - [Arran Ross-Paterson](https://twitter.com/arranrp)
 
 - Why are you here?
 	- The adventure
@@ -25,7 +25,7 @@ categories:
 	- Talk through a problem with them
 	- Chances are you know something that someone else doesn't
 
-##Bridging the gap between developers and designers with Sass - [Kaelig Deloumeau-Prigent](https://twitter.com/kaelig)
+## Bridging the gap between developers and designers with Sass - [Kaelig Deloumeau-Prigent](https://twitter.com/kaelig)
 - Releases 4x a day
 	- Lots of iterations from feedback, can try lots out
 - [Open Source](https://github.com/guardian/frontend)
@@ -38,7 +38,7 @@ categories:
 - Configure extra breakpoints to hook onto significant design changes, name them accordingly
 - Matrix of human friendly font names mapping to what shows up for developers and designers
 
-##Over promised and under delivered [Peter Gasston](@stopsatgreen)
+## Over promised and under delivered [Peter Gasston](@stopsatgreen)
 
 - You ruined my holiday!
 - File sizes are just getting worse and worse, it makes the web slow

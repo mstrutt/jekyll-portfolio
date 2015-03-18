@@ -10,7 +10,7 @@ categories:
 - http2
 ---
 
-##Playlister - Developing a new music product at the BBC - [Sara Gonzalo](http://twitter.com/sara_SGM)
+## Playlister - Developing a new music product at the BBC - [Sara Gonzalo](http://twitter.com/sara_SGM)
 
 - Why? People searching for 'that some that was on last week'
 - [@bbcplaylister](http://twitter.com/bbcplaylister)
@@ -18,7 +18,7 @@ categories:
 - Developing the new API using the docs from the old one
 - Nobody knows what 'export' means, they just want to 'listen'
 
-##What to expect from HTTP/2 - [Mark Nottingham](http://twitter.com/mnot)
+## What to expect from HTTP/2 - [Mark Nottingham](http://twitter.com/mnot)
 
 - Performance = Attention = £££
 - There are a lot of techniques people use today to get the most out of http performance - today

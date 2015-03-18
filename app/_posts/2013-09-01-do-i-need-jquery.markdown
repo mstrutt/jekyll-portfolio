@@ -17,10 +17,10 @@ I remember when I first started to write JavaScript, the number of if statements
 
 I'm not advocating that we stop using jQuery and other libraries all together, because that would be stupid, but I think we've become too dependant on them. Before including a library in a project, take a moment to think. Ask yourself: "What you'll be using it for?", "How many times will I be using it?", "How big will the project be before and after including it?" and "How else could I achieve the same result?".
 
-##Rewriting my site
+## Rewriting my site
 
 I decided that for the minimal amount I was making use of it's power, it wasn't worth keeping jQuery in my site, so I set about rewriting my code in vanilla JavaScript (you can see the [before](/assets/scripts/site.jquery.js) and the [after](/assets/scripts/site.js)). I'll be honest, the process left feeling both empowered and humiliated. Empowered that I'd managed to do it, knew quite a bit of it, and didn't have to write many more lines, but humiliated about how much I'd had to google, how many silly mistakes I made, and really why I hadn't done this in the first place for a lot of it. The main pain-point wasn't actually the ajax request as I thought it would be, but instead it was replacing the toggleClass function, which took a few more lines of code and some regex. In total instead of the 93.6kb of jQuery (packed), I wrote an extra ~1kb of JavaScript, making my page-weight for scripts now only 11.8kb and 1 less http request. To my mind, a pretty decent saving.
 
-##Closing thoughts
+## Closing thoughts
 
 I think for the point of tutorials certainly, it makes sense to show the fewer lines of code that jQuery offers, but it's important to at least reference other methods, or suggest that this could be done with "vanilla" JavaScript. I think those who are less experienced with JavaScript may suffer from a dependency on libraries to get things done, and we should think more carefully about which libraries, if any, are right for the project we are working on

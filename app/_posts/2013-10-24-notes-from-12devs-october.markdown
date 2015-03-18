@@ -11,7 +11,7 @@ categories:
 - ux
 ---
 
-##Life behind the curve: [@westleyknight](https://twitter.com/westleyknight)
+## Life behind the curve: [@westleyknight](https://twitter.com/westleyknight)
 
 - [http://uptodate.frontendrescue.org/](http://uptodate.frontendrescue.org/)
 - backlog takes way too long to go through
@@ -26,7 +26,7 @@ categories:
 	- build an archive (useful things to search later)
 	- take advice with a pinch of salt
 
-##Node.js - what is and why do? [@adamyeats](https://twitter.com/adamyeats)
+## Node.js - what is and why do? [@adamyeats](https://twitter.com/adamyeats)
 
 - JSis fun and works in lots of places
 - "Any application that can be written in JavaScript, will eventually written in JavaScript"
@@ -37,7 +37,7 @@ categories:
 - super active community
 - [http://nodejs.org/](http://nodejs.org/) | [http://nodeschool.io/](http://nodeschool.io/) | [http://jsforcats.com/](http://jsforcats.com/)
 
-##The internet is real anyway [@katskii](https://twitter.com/katskii)
+## The internet is real anyway [@katskii](https://twitter.com/katskii)
 
 - "It's not real life, it's only the internet" - No!
 - UI!==UX
@@ -48,7 +48,7 @@ categories:
 - "If everything is important, then nothing is"
 - Internet=Life
 
-##Digital feudalism and how to avoid it [@aral](https://twitter.com/aral)
+## Digital feudalism and how to avoid it [@aral](https://twitter.com/aral)
 
 - our devices give us superpowers, they extend our biological abilities
 - today we are cyborgs, we have technologies which extend our biological abilities

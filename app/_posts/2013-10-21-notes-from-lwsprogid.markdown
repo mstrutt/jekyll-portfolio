@@ -11,7 +11,7 @@ categories:
 - paypal
 ---
 
-##Modern Progressive Enhancement
+## Modern Progressive Enhancement
 
 - PE!=without JS
 - 'user'=browser + device + human
@@ -38,7 +38,7 @@ categories:
 	- graceful degradation ~ atomic enhancements
 - for SEOand JavaScript as a core dependency, you can consider robot as a 'user'
 
-##Online Identity
+## Online Identity
 
 - Do we always want to use the same identity online?
 - Authentication vs Authorisation

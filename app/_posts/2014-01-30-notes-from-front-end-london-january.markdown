@@ -14,7 +14,7 @@ categories:
 - offline
 ---
 
-##AngularJS - [Todd Motto](https://twitter.com/toddmotto)
+## AngularJS - [Todd Motto](https://twitter.com/toddmotto)
 - Client side MVC js framework
 - Focus on data-driven, not DOM manipulation
 - Modern web
@@ -38,7 +38,7 @@ categories:
 - Factory - abstract logic (dry)
 - 'Thinking Angular' - forget the dom exists.
 
-##Are you browsing comfortably? - [Steve Workman](https://twitter.com/steveworkman)
+## Are you browsing comfortably? - [Steve Workman](https://twitter.com/steveworkman)
 - The Web on TV
 - Most people can get some form of internet on their TVs, most through games consoles
 - There are more games consoles sold, than smart phones
@@ -64,7 +64,7 @@ categories:
 - "Couch Mode"
 - Internet TV is just the tip of the iceberg - what about wearables?
 
-##ServiceWorker and the offline web - [Tom Ashworth](https://twitter.com/phuunet)
+## ServiceWorker and the offline web - [Tom Ashworth](https://twitter.com/phuunet)
 - Offline - Why do we care?
 	- We don't have as much connection as we'd like to think
 	- Awesome places and poor connection go hand in hand
