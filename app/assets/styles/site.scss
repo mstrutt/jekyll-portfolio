@@ -175,7 +175,7 @@ body {
 	//width: 100%;
 	min-width: 320px;
 	padding-bottom: 20px;
-	background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") $lightgrey;
+	background: url("//img.mstrutt.co.uk/noise.png") $lightgrey;
 }
 
 .main {
@@ -256,7 +256,7 @@ form {
 		height: 40px;
 		width: 40px;
 		margin-left: 1.5rem;
-		background: rgba(0,0,0,.16) url(http://cdn.mstrutt.co.uk/assets/images/arrow-sprite.png) no-repeat 0 0;
+		background: rgba(0,0,0,.16) url(//img.mstrutt.co.uk/arrow-sprite.png) no-repeat 0 0;
 		color: transparent;
 		cursor: pointer;
 		//border-radius: 0 5px 5px 0;
@@ -417,7 +417,7 @@ form {
 	width: 133px;
 	height: 22px;
 	overflow: hidden;
-	background: url("http://cdn.mstrutt.co.uk/assets/images/rating-stars.png") -2px 0 repeat-x;
+	background: url("//img.mstrutt.co.uk/rating-stars.png") -2px 0 repeat-x;
 
 	&:after,
 	&:before {
@@ -427,7 +427,7 @@ form {
 		display: block;
 		height: 22px;
 		width: 27px;
-		background: $white url("http://cdn.mstrutt.co.uk/assets/images/rating-stars.png") -2px -22px repeat-x;
+		background: $white url("//img.mstrutt.co.uk/rating-stars.png") -2px -22px repeat-x;
 	}
 
 	&:after {
@@ -485,7 +485,7 @@ form {
 	> li {
 		margin: 1.1rem 0;
 		padding: 0 0 0 3.5rem;
-		background: url("http://cdn.mstrutt.co.uk/assets/images/tweet-icon.png") 0 .6em no-repeat;
+		background: url("//img.mstrutt.co.uk/tweet-icon.png") 0 .6em no-repeat;
 	}
 }
 
