@@ -1,7 +1,7 @@
 .header {
 	position: relative;
 	border-top: 70px solid $white;
-	background: $green url(http://cdn.mstrutt.co.uk/assets/images/noise.png);
+	background: $green url(http://img.mstrutt.co.uk/noise.png);
 	box-shadow: 0 0 5px rgba(0,0,0,.1);
 	z-index: 2;
 
@@ -27,7 +27,7 @@
 		width: 88px;
 		font: 38px/96px $fontEnriqueta;
 		border-radius: 50%;
-		background: url('http://cdn.mstrutt.co.uk/assets/images/noise.png') $logogrey;
+		background: url('http://img.mstrutt.co.uk/noise.png') $logogrey;
 		color: $white;
 		text-align: center;
 		transform: rotate(-7.5deg) scale(1.01);
@@ -45,7 +45,7 @@
 	.title {
 		padding: 1.5rem 0 110%;
 		margin: 0;
-		background: url(http://cdn.mstrutt.co.uk/assets/images/illustration.png) 55% 100% no-repeat;
+		background: url(http://img.mstrutt.co.uk/illustration.png) 55% 100% no-repeat;
 		background-size: 125% auto;
 	}
 
@@ -82,7 +82,7 @@
 	 	display: inline-block;
 	 	width: 60px;
 	 	height: 60px;
-	 	background: url("http://cdn.mstrutt.co.uk/assets/images/social-icons.png") 0 0 no-repeat rgb(63,63,63);
+	 	background: url("http://img.mstrutt.co.uk/social-icons.png") 0 0 no-repeat rgb(63,63,63);
 	 	background-color: rgba(63,63,63,.3);
 	 	border-radius: 50%;
 	 	margin: 5px;
@@ -145,7 +145,7 @@
 			display: block;
 			height: 0;
 			width: 0;
-			background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") $lightgrey;
+			background: url("http://img.mstrutt.co.uk/noise.png") $lightgrey;
 			border-radius: 0 0 5px 0;
 			// transition: .2s;
 			border: 10px solid transparent;
@@ -158,7 +158,7 @@
 .see-my-code {
 	height: 70px;
 	margin-bottom: -20px;
-	background: url("http://cdn.mstrutt.co.uk/assets/images/noise.png") $grey;
+	background: url("http://img.mstrutt.co.uk/noise.png") $grey;
 	box-shadow: inset 0 -2px 10px -5px rgba(0,0,0,.2);
 
 	.inner {
@@ -198,7 +198,7 @@
 			line-height: 30px;
 			vertical-align: middle;
 			color: transparent;
-			background: url("http://cdn.mstrutt.co.uk/assets/images/arrow-sprite.png") no-repeat -45px -5px #888;
+			background: url("http://img.mstrutt.co.uk/arrow-sprite.png") no-repeat -45px -5px #888;
 			cursor: pointer;
 			border-radius: 5px;
 		}
