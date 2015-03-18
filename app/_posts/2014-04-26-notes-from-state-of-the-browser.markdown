@@ -9,7 +9,7 @@ categories:
 - sotb4
 ---
 
-##Firefox OS: not only promises - [Fernando Campo](https://twitter.com/ferkhamp) and [Borja Salguero](https://twitter.com/borjasalguero)
+## Firefox OS: not only promises - [Fernando Campo](https://twitter.com/ferkhamp) and [Borja Salguero](https://twitter.com/borjasalguero)
 
 [Slides on slides.com](http://slides.com/fercampo/not-only-promises/)
 
@@ -70,7 +70,7 @@ categories:
 	- `vw, vh, vmax, vmin`
 	- Viewport-relative lengths 
 
-##Browsers at play - [Ruth John](https://twitter.com/rumyra)
+## Browsers at play - [Ruth John](https://twitter.com/rumyra)
 
 All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 
@@ -90,7 +90,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 	- Not very well supported (lots of Skeletor)
 - Gamepad API lets you control your browser using a Gamepad
 
-##Network connectivity: optional - [Jake Archibald](https://twitter.com/jaffathecake)
+## Network connectivity: optional - [Jake Archibald](https://twitter.com/jaffathecake)
 
 [Slides on speakerdeck](https://speakerdeck.com/jaffathecake/the-web-the-bird-at-the-zoo)
 
@@ -111,7 +111,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 - There are already specifications for Background Synchronization and Push
 - Contribute to [ServiceWorker on GitHub](https://github.com/slightlyoff/ServiceWorker)
 
-##High-performance web platform - [Martin Beeby](https://twitter.com/thebeebs)
+## High-performance web platform - [Martin Beeby](https://twitter.com/thebeebs)
 
 [Presentation on PowerPoint Online](http://bit.ly/perfSOTB)
 
@@ -141,7 +141,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 	- The memory has to be copied from the CPU to the GPU, that can cause a long latency
 - When developing, always think about low end devices first
 
-##Brace yourselves: responsive images are coming - [Yoav Weiss](https://twitter.com/yoavweiss)
+## Brace yourselves: responsive images are coming - [Yoav Weiss](https://twitter.com/yoavweiss)
 
 [Slides available on GitHub.io](http://yoavweiss.github.io/respimg-sotb-presentation/#/)
 
@@ -176,7 +176,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 - Feature detection
 	- `HTMLImageElement.sizes` & `HTMLImageElement`
 
-##What it means to be flexible? - [Dan Donald](https://twitter.com/hereinthehive)
+## What it means to be flexible? - [Dan Donald](https://twitter.com/hereinthehive)
 
 - [Break The Page](http://breakthepage.com)
 - RWD - It's open to interpretation
@@ -198,7 +198,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 	- [Some of the JavaScript is available on GitHub](https://github.com/hereinthehive/responsive-modules)
 - Question your defaults, don't just do what you've always done, always think what's best for the situation
 
-##Open web apps: going beyond the desktop - [Chris Heilmann](https://twitter.com/codepo8)
+## Open web apps: going beyond the desktop - [Chris Heilmann](https://twitter.com/codepo8)
 
 - We are coming together now - Browser opinions are complimenting each other instead of arguing
 - Open Web Apps - a manifest file what says "this site is an app"
@@ -220,9 +220,9 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 - Go as low as you can when testing, slow things right down
 - We're here today because of the open web. You made your first page for free, and put it somewhere for free
 
-##Discussion panel - Moderated by [Daniel Appelquist](https://twitter.com/torgo)
+## Discussion panel - Moderated by [Daniel Appelquist](https://twitter.com/torgo)
 
-###Thoughts on http2 / spdy
+### Thoughts on http2 / spdy
 
 - *best* practices will become *bad* practices
 	- don't combine everything into one file, let them cache it in fragments
@@ -231,7 +231,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 - Will be a lot of new security with the web enforcing https
 - Most of us use a build process as it is, hopefully it will be simple enough to change just that process when we move towards http2
 
-###How can we create a web industry where women don't feel alienated?
+### How can we create a web industry where women don't feel alienated?
 
 - [Martin](https://twitter.com/thebeebs): "I try not to be a dick"
 - Social perception is not necessarily about gender, it's about discrimination, we need to re-evaluate the social perception
@@ -245,7 +245,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 - "Platform" is just a matter of naming, not long ago we were saying "web standards" or "web stack" or use "HTML5" to encompass everything - [Andreas](https://twitter.com/andreasbovens)
 - It's a word we use for this "thing" we share between a lot of different companies - [Borja](https://twitter.com/borjasalguero)
 
-###WebGL and how can we make the web more open for game developers
+### WebGL and how can we make the web more open for game developers
 
 - The web wasn't necessarily built as a platform for gaming, use something for not quite what it was intended for and maybe *then* we'll see these things developing
 - There is a lot of interest from game developers in WebGL, but it will be a long while before gaming on the web is "serious"
@@ -253,7 +253,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 - They are two different worlds really, people have their own tool sets and they use them. That's why some of the earlier unreal engines were ported to HTML5
 - Interestingly WebGL gave us faster canvas an pixel manipulation. Gaming is almost the benchmark and speed test of the web
 
-###How will webcomponents change the way we make apps
+### How will webcomponents change the way we make apps
 
 - [Chris](https://twitter.com/codepo8): Webcomponents are an amazing opportunity to write proper widgets for the web.
 	- Whatever element you were missing, you can write, and publish
@@ -264,7 +264,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 - As a developer, you will no longer be second class to how the webpage works
 - [Yoav](https://twitter.com/yoavweiss): concerned about the render-blocking implications of the HTML imports
 
-###What's the future state of deep-linking from / to web apps on a mobile device
+### What's the future state of deep-linking from / to web apps on a mobile device
 
 - The flow from app to app feels very familiar 
 - We can't lose access to the URL - stop putting words in [Jake](https://twitter.com/jaffathecake)'s mouth!
@@ -272,7 +272,7 @@ All demos available on [dancing.rumyra.com](http://dancing.rumyra.com)
 - [Andreas](https://twitter.com/andreasbovens): We need to make sure that if we can turn the web into an app, we can still turn an app back into the web
 - [Jake](https://twitter.com/jaffathecake): We don't want to ask for access to all features upfront but keep the web's model of asking for the permission the first time you need it - it also gives the action context
 
-###Can you discuss the security implications around service worker
+### Can you discuss the security implications around service worker
 
 - [Jake](https://twitter.com/jaffathecake)
 	- Yes, you can hijack a request, which sounds scary, but the only person you can shoot in the foot, is yourself

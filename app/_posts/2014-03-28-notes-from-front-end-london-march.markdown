@@ -11,7 +11,7 @@ categories:
 - 3d
 ---
 
-##How to Win Designers and Influence Developers - [Adam Rogers](https://twitter.com/rodreegez)
+## How to Win Designers and Influence Developers - [Adam Rogers](https://twitter.com/rodreegez)
 
 - Project Management
 - People don't always do what you tell them
@@ -36,7 +36,7 @@ categories:
 	- Help someone fix something, go through it with them
 	- Ask someone a question
 
-##Exploring CSS3's 3D space - [Daniel Grant](https://twitter.com/danieljohngrant)
+## Exploring CSS3's 3D space - [Daniel Grant](https://twitter.com/danieljohngrant)
 
 Check out the [highly impressive demonstrations](http://codepen.io/collection/gKutL/) Daniel put together, including a CSS Solar System
 
@@ -51,7 +51,7 @@ Check out the [highly impressive demonstrations](http://codepen.io/collection/gK
 - Ooh, pretty thing is pretty!
 - Is 3D CSS useful? Yeah, but as a learning tool
 
-##Can code quality be measured? - [Tim Ruffles](https://twitter.com/timruffles)
+## Can code quality be measured? - [Tim Ruffles](https://twitter.com/timruffles)
 
 - Sidekick.js a code quality tracker
 - Code quality: Who does it anger?

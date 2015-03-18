@@ -11,7 +11,7 @@ categories:
 - webapps
 ---
 
-##Firefox OS in a nutshell [@ferkhamp](https://twitter.com/ferkhamp) [@borjasalguero](https://twitter.com/borjasalguero)
+## Firefox OS in a nutshell [@ferkhamp](https://twitter.com/ferkhamp) [@borjasalguero](https://twitter.com/borjasalguero)
 
 - Make something affordable for everyone
 - "Will Firefox OS change the app's history?"
@@ -40,7 +40,7 @@ categories:
 - Debug using Firefox's web inspector
 - You can modify all the html and CSS of your firefox OS homescreen
 
-##What's new in Web Standards [@torgo](https://twitter.com/torgo)
+## What's new in Web Standards [@torgo](https://twitter.com/torgo)
 
 - The web is evolving
 - Web is almost a majority mobile platform
