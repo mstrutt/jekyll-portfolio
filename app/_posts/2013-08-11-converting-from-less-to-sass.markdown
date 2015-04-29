@@ -34,7 +34,7 @@ Since making the decision to use SASS over LESS as my pre-processor of choice, I
 
 ### Replacing variables syntax
 
-The only different between variables in LESS and variables in SASS is the character they use, so we the exception of the reserved words of the [CSS at-rules](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule) (`@media`, `@keyframes` etc) and the LESS reserved word `@include`, you can just swap the `@` character for the `$` character.
+The only different between variables in LESS and variables in SASS is the character they use, so with the exception of the reserved words of the [CSS at-rules](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule) (`@media`, `@keyframes` etc) and the LESS reserved word `@include`, you can just swap the `@` character for the `$` character.
 
 Find: `@((?!media|include|charset|document|font-face|import|keyframes|page|supports)[a-zA-Z_]+)`
 Replace: `$\1`
