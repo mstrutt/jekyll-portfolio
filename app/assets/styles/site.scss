@@ -92,6 +92,11 @@ a {
 	&:hover {
 		color: $deepOrange;
 	}
+
+	&.disabled {
+		color: #888;
+		cursor: not-allowed;
+	}
 }
 
 %touch-link {
