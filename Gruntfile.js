@@ -80,6 +80,17 @@ module.exports = function (grunt) {
 			}
 		},
 
+		svgstore: {
+			icons: {
+				options: {
+					includeTitleElement: false
+				},
+				files: {
+					'<%= config.app %>/_includes/icons.svg': ['<%= config.app %>/assets/images/icons/*.svg']
+				}
+			}
+		},
+
 		imagemin: {
 			build: {
 				files: [{
@@ -222,6 +233,10 @@ module.exports = function (grunt) {
 			html: {
 				files: ['<%= config.app %>/{,*/}*.{html,markdown}'],
 				tasks: ['copy:temp', 'jekyll:build']
+			},
+			icons: {
+				files: ['<%= config.app %>/assets/images/icons/*.svg'],
+				tasks: ['svgstore', 'jekyll:build']
 			}
 		}
 	});
@@ -230,7 +245,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('build', 'Build the site, nothing fancy, no minification', function(target) {
 		var tasks = {
-			prep: ['clean', 'copy:temp'],
+			prep: ['clean', 'svgstore', 'copy:temp'],
 			css: ['sass', 'autoprefixer'],
 			minify: [
 				'useminPrepare',

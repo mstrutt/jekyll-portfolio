@@ -24,6 +24,7 @@
     "grunt-match-media": "0.1.0",
     "grunt-phantomcss": "git://github.com/clarkeadg/grunt-phantomcss.git",
     "grunt-sass": "~1.0.0",
+    "grunt-svgstore": "^0.5.0",
     "grunt-usemin": "~3.1.1",
     "load-grunt-tasks": "^3.1.0",
     "time-grunt": "^1.1.0"
