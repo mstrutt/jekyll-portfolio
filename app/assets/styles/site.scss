@@ -450,10 +450,17 @@ form {
 	line-height: 3rem;
 	margin: 1em 0;
 
-	> li {
+	.tweet {
+		position: relative;
 		margin: 1.1rem 0;
 		padding: 0 0 0 3.5rem;
-		background: url("//img.mstrutt.co.uk/tweet-icon.png") 0 .6em no-repeat;
+	}
+
+	.icon {
+		position: absolute;
+		top: 4px;
+		left: 0;
+		color: #d8d8d8;
 	}
 }
 
