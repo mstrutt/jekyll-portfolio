@@ -11,6 +11,11 @@ ul {
 	list-style-type: none;
 }
 
+svg {
+	display: block;
+	fill: currentColor;
+}
+
 /* Helper */
 
 .ir {
@@ -298,49 +303,7 @@ form {
 
 /* Footer */
 
-.footer {
-	text-align: center;	
-
-	.social-links {
-		position: relative;
-		width: 93.75%; // equates to 300px at 320px wide 
-		margin: 0 auto;
-		overflow: hidden;
-
-		&:before,
-		&:after {
-			content: "";
-			display: block;
-			position: absolute;
-			top: 50%;
-			margin-top: -2px;
-			height: 2px;
-			width: 50%;
-			border: 1px solid #DCDCDC;
-			border-width: 1px 0;
-			z-index: -1;
-		}
-
-		&:before {
-			left: 0;
-			margin-left: -115px;
-		}
-
-		&:after {
-			right: 0;
-			margin-right: -115px;
-		}
-	}
-}
-
-.go-to-top {
-	font-size: 1.6rem;
-}
-
-.copyright {
-	font-size: 1.4rem;
-	color: #bfbfbf;
-}
+@import 'modules/footer';
 
 /* Homepage */
 
@@ -487,10 +450,17 @@ form {
 	line-height: 3rem;
 	margin: 1em 0;
 
-	> li {
+	.tweet {
+		position: relative;
 		margin: 1.1rem 0;
 		padding: 0 0 0 3.5rem;
-		background: url("//img.mstrutt.co.uk/tweet-icon.png") 0 .6em no-repeat;
+	}
+
+	.icon {
+		position: absolute;
+		top: 4px;
+		left: 0;
+		color: #d8d8d8;
 	}
 }
 

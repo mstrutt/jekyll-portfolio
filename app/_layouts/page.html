@@ -34,6 +34,10 @@
 		<![endif]-->
 	</head>
 	<body class="{{ page.class }}">
+		<div style="display: none;">
+			{% include icons.svg %}
+		</div>
+
 		<aside class="see-my-code" style="display: none;">
 			<div class="inner">
 				<a class="close" id="hide-my-code" href="#">Don't show this again!</a>
@@ -47,11 +51,7 @@
 		{{ content }}
 
 		<footer class="footer">
-			<div class="social-links">
-				<a class="rss" title="RSS feed" href="/rss.xml">RSS</a>
-				<a class="linkedin" title="LinkedIn" href="http://www.linkedin.com/profile/view?id=183911833">LinkedIn</a>
-				<a class="twitter" title="Twitter" href="http://twitter.com/mstrutt_co_uk">@mstrutt_co_uk</a>
-			</div>
+			{% include social-links.html %}
 
 			<p class="copyright"> Copyright Michael Strutt &copy; 2007 - {{ site.time | date: '%Y' }}</p>
 

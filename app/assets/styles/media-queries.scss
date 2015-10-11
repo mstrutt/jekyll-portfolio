@@ -26,7 +26,7 @@
 			position: absolute;
 			bottom: 5%;
 			right: 0;
-			left: 41.875%;
+			left: 41%;
 			margin: 0 3.125%;
 		}
 
@@ -50,6 +50,7 @@
 
 		.social-links {
 			text-align: right;
+			margin-left: -40px;
 
 			> .twitter {
 				margin-right: 0;

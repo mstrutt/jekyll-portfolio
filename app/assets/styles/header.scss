@@ -79,31 +79,31 @@
 	text-align: center;
 
 	> a {
-	 	display: inline-block;
-	 	width: 60px;
-	 	height: 60px;
-		background: url("//img.mstrutt.co.uk/social-icons.png") 0 0 no-repeat rgb(63,63,63);
-	 	background-color: rgba(63,63,63,.3);
-	 	border-radius: 50%;
-	 	margin: 5px;
-	 	@extend .ir;
-	 	transition: .2s;
+		display: inline-block;
+		padding: 12px;
+		margin: 5px 0;
+		border-radius: 50%;
+		background-color: rgb(63,63,63);
+		background-color: rgba(63,63,63,.3);
+		color: $verylightgrey;
+		transition: .2s;
 
-	 	&:focus,
-	 	&:active,
-	 	&:hover {
-	 		background-color: rgba(63,63,63,.6);
+		&:focus,
+		&:active,
+		&:hover {
+			background-color: rgba(63,63,63,.6);
 			transform: scale(1.1, 1.1);
 			outline: none;
-	 	}
-	 }
+		}
 
-	> .linkedin {
-		background-position: -60px 0;
- 	}
-	> .twitter {
- 		background-position: -120px 0;
- 	}
+		> svg {
+			display: block;
+		}
+
+		+ a {
+			margin-left: 10px;
+		}
+	}
 }
 
 .header .primary-nav {
