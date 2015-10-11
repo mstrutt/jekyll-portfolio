@@ -1,0 +1,43 @@
+.footer {
+	text-align: center;	
+
+	.social-links {
+		position: relative;
+		width: 93.75%; // equates to 300px at 320px wide 
+		margin: 0 auto;
+		overflow: hidden;
+
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			margin-top: -2px;
+			height: 2px;
+			width: 50%;
+			border: 1px solid #DCDCDC;
+			border-width: 1px 0;
+			z-index: -1;
+		}
+
+		&:before {
+			left: 0;
+			margin-left: -150px;
+		}
+
+		&:after {
+			right: 0;
+			margin-right: -150px;
+		}
+	}
+}
+
+.go-to-top {
+	font-size: 1.6rem;
+}
+
+.copyright {
+	font-size: 1.4rem;
+	color: #bfbfbf;
+}

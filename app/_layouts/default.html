@@ -22,17 +22,13 @@ layout: page
 		{% if page.class == "home" %}
 
 			<div class="prefetch">
-				<img src="//img.mstrutt.co.uk/illustration.png" alt="Illustration of Michael Strutt done by Kelly Dyson" />
-				<img src="//img.mstrutt.co.uk/rating-stars.png" alt="rating stars" />
+				<img src="//img.mstrutt.co.uk/illustration.png" alt />
+				<img src="//img.mstrutt.co.uk/rating-stars.png" alt />
 			</div>
 
 			<div class="header-text-lower">
 				<p class="subtitle">a <strong>front-end web developer</strong> based in London</p>
-				<div class="social-links">
-					<a class="rss" title="RSS feed" href="/rss.xml">RSS</a>
-					<a class="linkedin" title="LinkedIn" href="http://www.linkedin.com/profile/view?id=183911833">LinkedIn</a>
-					<a class="twitter" title="Twitter" href="http://twitter.com/mstrutt_co_uk">@mstrutt_co_uk</a>
-				</div>
+				{% include social-links.html %}
 			</div>
 
 		{% endif %}
