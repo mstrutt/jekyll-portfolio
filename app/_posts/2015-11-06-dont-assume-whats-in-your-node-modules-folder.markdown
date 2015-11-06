@@ -40,7 +40,7 @@ Thankfully `require` has some slightly lesser known applications that can help u
 Putting these together we can easily solve the problem from my previous example
 
 ```
-var configPath = require.resolve('/node_modules/some-module/path/to/config.json');
+var configPath = require.resolve('some-module/path/to/config.json');
 ```
 
 and now never have to worry about where `some-module` actually is, so long as npm knows.
