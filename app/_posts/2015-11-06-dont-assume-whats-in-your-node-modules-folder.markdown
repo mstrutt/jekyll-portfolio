@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Don't assume what's in your node_modules folder
+preview: NPM v3 has been out for a little while now, and with it has come a not insignificant change, the structure of the node_modules folder has been largely flattened. If you're just using other modules within your project, then this change shouldn't really impact you. If you're publishing an npm module with dependency on other modules, however, then this change means that the dependencies of your module are likely to be in the root level.
 date: 2015-11-06 08:06:21
 categories:
 - npm
