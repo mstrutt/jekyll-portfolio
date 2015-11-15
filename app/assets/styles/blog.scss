@@ -46,18 +46,18 @@
 		padding-left: 2em;
 		margin: 1em 0;
 
-		li {
-			@extend %touch-link;
-			
-			font-size: 1.4rem;
-			line-height: 3rem;
-			margin: 0;
-		}
-
 		ul {
 			list-style-type: circle;
 			margin: 0;
 		}
+	}
+
+	li {
+		@extend %touch-link;
+
+		font-size: 1.4rem;
+		line-height: 3rem;
+		margin: 0;
 	}
 
 	img {
