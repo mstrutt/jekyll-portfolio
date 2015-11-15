@@ -19,7 +19,7 @@
     "grunt-contrib-imagemin": "^0.9.3",
     "grunt-contrib-uglify": "~0.9.2",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-eslint": "^17.1.0",
+    "grunt-eslint": "17.1.0",
     "grunt-jekyll": "~0.4.1",
     "grunt-match-media": "0.1.0",
     "grunt-phantomcss": "git://github.com/clarkeadg/grunt-phantomcss.git",
