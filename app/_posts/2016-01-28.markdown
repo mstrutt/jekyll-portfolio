@@ -1,0 +1,182 @@
+---
+layout: post
+title: Front-end London, January 2016
+preview: My notes from Front-end London's January Event - Taking Part in the IndieWeb by Calum Ryan, The Miracle of Generators by Bodil Stokke, and How to not use jQuery by Callum MacRae
+date: 2016-01-28 19:00:00
+categories:
+- notes
+- fel
+- indieweb
+- es6
+- generators
+- jquery
+- vanillajs
+---
+
+## Taking part in the IndieWeb - [Calum Ryan](http://twitter.com/calum_ryan)
+
+- back in the late 90s
+	- things like geocities were the best free way to put content onto the internet
+	- lovely things like
+		- marques
+		- the time
+		- a ring of links to other sites
+		- "beautiful" images
+- then things like myspace
+	- Tom was everyone's friend
+	- One page for everything you wanted to put up
+	- A good learning ground for some basic HTML/CSS
+- about 2005
+	- putting our content into hosting arrangements where you don't actually own the space
+	- mega silos
+		- pretty much anybody with a login could access your content
+		- the content host claims ownership of your content
+		- nothing you can do if they go down, content is just lost
+- why do people use these thing?
+	- free
+	- very simple interface to make it accessible
+- declining interest in having your own website
+	- other things are just easier
+- interconnectivity
+- enter [IndieWebCamp](http://indiewebcamp.com)
+	- working on an open source platform, a wiki for how to keep your data a bit safer
+	- better solutions to publish content and host your own data
+	- IndieWebCamp != ind.ie
+- key goals for IndieWebCamp
+	- your content is *yours* - when you post something on the web, it should be yours
+	- be better connected - should go to all services (that you want)
+	- content is hosted by you, then linked to on the favorite silo of the day
+	- *you* are in control - post how, and when, you want, links are permanent
+- [IndieWebify.Me](http://indiewebify.me) - how indie web is your website?
+- how do I Indie Web?
+	- get a domain
+	- choose your hosting
+		- advise paid-for
+		- GitHub pages is a good free option
+		- [Known](withknown.com) - free with some paid features (or host yourself)
+	- identify who you are (`rel="me"` attribute on social links)
+		- microformats for articles, people, places
+	- POSSE (Post on your Own Site first, then Syndicate Elsewhere)
+	- @webmentions
+		- notify another URL when you link to it on your site (superseded pingback)
+		- `rel="webmention"` `source="my-website-page"` `target="their-website-page"`
+		- first W3C working draft 12th Jan
+- Bridgy
+- build a better experience than the silos
+- one example: using [twillio API] to text content to your website, then syndicated to twitter
+- come along to IndieWebCamp camps or fortnightly events
+- get involved!
+
+
+## --The Miracle of-- Generators are dashed jolly spiffy - [Bodil Stokke](http://twitter.com/bodil)
+
+- iterators
+	- for going over a collection, instead of strictly arrays
+	- `i = ponises.values(); i.next(); {"value: "next value", "done": true/false}`
+	- `for (let i of ponies)`
+- symbols
+	- ```
+	ponies = {
+		[Symbol.iterator]: () => {
+			let c = 0;
+			return {
+				next: () => {
+					c += 1;
+					if (c === 1) return {value: "foo", done: false};
+					else if (c === 2) return {value: "bar", done: false};
+					return {done: true};
+				}
+			};
+		}
+	};
+	```
+- you can do nice things like an infinity iterator, a counter that counts forever (you don't need a fixed array)
+	- lazy loading array as values are only evaluated when `.next()` is called
+- can wrap an iterator around an iterator
+- can change the order or wrapping without issue, end up like a lazy sequence library
+- end up quite like closure
+
+### Generator
+	
+```
+infinity = function*() {
+	let c = 0;
+	white (true) {
+		yield c++;
+	}
+}
+```
+
+- function will pause at execution of `yield` until the `.next()` is called again
+- will end up with infinite potential to as many as you need without the worry of an infinite loop
+
+``` 
+fiveup = function*() P
+	let c = 0;
+	while (true) {
+		c = yield c;
+		c = c + 5;
+	}
+};
+
+i = fiveup();
+i.next() // 0
+i.next() // 5
+i.next(20) // 25
+```
+
+### Promises with generators
+
+```
+unit = v => new Promise((res) => res(v));
+
+promises = function*() {
+	console.log(yield unit('omg'));
+	console.log(yield unit('wtf'));
+	console.log(yield unit('bbq'));
+}
+
+// iterate over a series of resolved promises
+run = (iter, val = null)) => {
+	const next = iter.next(val);
+	if (!next.done) {
+		next.value.then(result => run(iter, result));
+	}
+};
+
+```
+
+- you can write synchronous looking code to do decidedly async things
+- returning from a generator gives a value with the final `{done: true}`
+
+```
+fetchText = function*(url) {
+	return yield (yield fetch(url)).text();
+}
+```
+
+Type checking for JS:
+
+```
+maybe = (val) => ({
+	then: (fn) => val != null ? fn(val) : null;
+});
+
+prop = (key, obj) => maybe(obj[key]);
+
+things = function*() {
+	const dash = yield prop('dash', ponies);
+	const pie = yield pprop('pie', ponies);
+	return dash + 'is friends with' + pie;
+}
+```
+
+- `yield` can hide away the promise `.then` chains and just deal with values
+- this is a Monad (kind of like a cute puppy in a burrito)
+- Promises are totally Monads
+- [bodil.lol/generators](http://bodil.lol/generators)
+
+
+## How to not use jQuery - [Callum MacRae](https://twitter.com/callumacrae)
+
+- 
