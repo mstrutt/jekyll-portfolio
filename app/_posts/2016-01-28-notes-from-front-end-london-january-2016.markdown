@@ -53,7 +53,7 @@ categories:
 	- choose your hosting
 		- advise paid-for
 		- GitHub pages is a good free option
-		- [Known](withknown.com) - free with some paid features (or host yourself)
+		- [Known](https://withknown.com) - free with some paid features (or host yourself)
 	- identify who you are (`rel="me"` attribute on social links)
 		- microformats for articles, people, places
 	- POSSE (Post on your Own Site first, then Syndicate Elsewhere)
@@ -69,6 +69,8 @@ categories:
 
 
 ## <del>The Miracle of Generators</del> Generators are dashed jolly spiffy - [Bodil Stokke](http://twitter.com/bodil)
+
+[slides available on bodil.lol](http://bodil.lol/generators)
 
 - iterators
 	- for going over a collection, instead of strictly arrays
@@ -176,10 +178,8 @@ things = function*() {
 - `yield` can hide away the promise `.then` chains and just deal with values
 - this is a Monad (kind of like a cute puppy in a burrito)
 - Promises are totally Monads
-- [bodil.lol/generators](http://bodil.lol/generators)
 
-
-## How to not use jQuery - [Callum MacRae](https://twitter.com/callumacrae)
+## How to not use jQuery - [Callum Macrae](https://twitter.com/callumacrae)
 
 - jQuery, 2005 (11 years ago)
 - `var` is function-scoped, `let` is block-scoped
@@ -233,7 +233,7 @@ $user.css('background-color', '#000')
 user.style.backgroundColor = '#000'
 
 $user.css('background-color')
-getComputedStyle(user).backgroundColour
+getComputedStyle(user).backgroundColor
 ```
 
 ```
@@ -295,5 +295,5 @@ object.assign({
 
 - Everything jQuery does, can be done without it
 - it can make your life a lot easier though
-- Babel adds less bytes than jQuery
-- jNearly, coming to a browser near you
+- [Babel](https://babeljs.io/) adds less bytes than jQuery
+- [jNearly](https://www.npmjs.com/package/jnearly), coming to a browser near you
