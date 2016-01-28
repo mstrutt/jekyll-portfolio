@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Front-end London, January 2016
+title: Notes from Front-end London, January 2016
 preview: My notes from Front-end London's January Event - Taking Part in the IndieWeb by Calum Ryan, The Miracle of Generators by Bodil Stokke, and How to not use jQuery by Callum MacRae
 date: 2016-01-28 19:00:00
 categories:
@@ -68,28 +68,30 @@ categories:
 - get involved!
 
 
-## --The Miracle of-- Generators are dashed jolly spiffy - [Bodil Stokke](http://twitter.com/bodil)
+## <del>The Miracle of Generators</del> Generators are dashed jolly spiffy - [Bodil Stokke](http://twitter.com/bodil)
 
 - iterators
 	- for going over a collection, instead of strictly arrays
 	- `i = ponises.values(); i.next(); {"value: "next value", "done": true/false}`
 	- `for (let i of ponies)`
 - symbols
-	- ```
-	ponies = {
-		[Symbol.iterator]: () => {
-			let c = 0;
-			return {
-				next: () => {
-					c += 1;
-					if (c === 1) return {value: "foo", done: false};
-					else if (c === 2) return {value: "bar", done: false};
-					return {done: true};
-				}
-			};
-		}
-	};
-	```
+
+```
+ponies = {
+	[Symbol.iterator]: () => {
+		let c = 0;
+		return {
+			next: () => {
+				c += 1;
+				if (c === 1) return {value: "foo", done: false};
+				else if (c === 2) return {value: "bar", done: false};
+				return {done: true};
+			}
+		};
+	}
+};
+```
+
 - you can do nice things like an infinity iterator, a counter that counts forever (you don't need a fixed array)
 	- lazy loading array as values are only evaluated when `.next()` is called
 - can wrap an iterator around an iterator
@@ -155,9 +157,9 @@ fetchText = function*(url) {
 }
 ```
 
-Type checking for JS:
-
 ```
+// Type checking for JS
+
 maybe = (val) => ({
 	then: (fn) => val != null ? fn(val) : null;
 });
@@ -179,4 +181,119 @@ things = function*() {
 
 ## How to not use jQuery - [Callum MacRae](https://twitter.com/callumacrae)
 
-- 
+- jQuery, 2005 (11 years ago)
+- `var` is function-scoped, `let` is block-scoped
+
+```
+function foo ({name, colour}) {
+	console.log(name + ' likes ' + colour);
+}
+foo({name: 'Callum', colour: 'orange'});
+```
+
+```
+// jQuery
+$('.selector')
+
+// Vanilla
+let users = document.querySelectorAll('.selector')
+for (let user of users) {
+	...
+}
+```
+
+```
+$user.next()
+user.nextElementSibling / previousElementSibling / parentElementSibling
+```
+
+```
+$user.attr('aria-live')
+user.getAttribute('aria-live')
+```
+
+```
+$user.html()
+user.innerHtml
+
+$user.text()
+user.textContent // not innerText
+
+$('.input').val()
+document.querySelector('.input').value
+```
+
+```
+$user.toggleClass('foo')
+user.classList.toggle('foo')
+```
+
+```
+$user.css('background-color', '#000')
+user.style.backgroundColor = '#000'
+
+$user.css('background-color')
+getComputedStyle(user).backgroundColour
+```
+
+```
+$(document).on('click', '.user', function() {
+	...
+})
+document.addEventListener('click', function(e) {
+	if (e.target.matches('.user')) {
+		...
+	}
+})
+```
+
+```
+$.ajax(...
+fetch(...
+```
+
+```
+$.each
+Array.prototype.forEach
+// plus lots of other options
+```
+
+```
+$.parseJSON(data)
+JSON.parse(data)
+```
+
+```
+options = $.extend({
+	foo: 'bar'
+}, options)
+
+object.assign({
+	foo: 'bar'
+}, options)
+```
+
+- jQuery animations vs CSS transitions and requestAnimationFrame
+- A lot of this isn't in browser yet, as it's ES6
+	- check out Babel
+
+### But when *would* you want to use jQuery?
+
+- Old IE, IE8 pretty much requires it
+- checkout [caniuse.com](http://caniuse.com) and plug in your analytics data to see what your user-base supports
+- low barrier to entry, juniors and backend devs can write it easily
+- there are a LOT of libraries for it, often the ones you want depend on it
+- 110 browser quirks fixed by jQuery in modern browsers
+
+### More ES6
+
+- ES6 Classes, syntax sugar around what we've got already
+- ES2015? because they'll be doing smaller, yearly releases of JS
+- ES2016 will be coming soon...
+
+### Summary
+
+- Everything jQuery does, can be done without it
+- it can make your life a lot easier though
+- Babel adds less bytes than jQuery
+- jNearly, coming to a browser near you
