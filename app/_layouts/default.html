@@ -12,8 +12,8 @@ layout: page
 		<a class="contact{% if page.class == 'contact' %} active {% endif %}" href="/contact">Contact</a>
 	</nav>
 
-	<div class="header-text">
-		<a class="logo" href="/" title="home">MS</a>
+	<div class="header-text {% if page.class == 'home' %}h-card{% endif %}">
+		<a class="logo u-logo" href="/" title="home">MS</a>
 		
 		<h1 class="title">{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
 
@@ -22,12 +22,12 @@ layout: page
 		{% if page.class == "home" %}
 
 			<div class="prefetch">
-				<img src="//img.mstrutt.co.uk/illustration.png" alt />
-				<img src="//img.mstrutt.co.uk/rating-stars.png" alt />
+				<img src="//img.mstrutt.co.uk/illustration.png" alt="" />
+				<img src="//img.mstrutt.co.uk/rating-stars.png" alt="" />
 			</div>
 
 			<div class="header-text-lower">
-				<p class="subtitle">a <strong>front-end web developer</strong> based in London</p>
+				<p class="subtitle">a <strong class="p-job-title">front-end web developer</strong> based in <span class="p-locality">London</span></p>
 				{% include social-links.html %}
 			</div>
 
@@ -36,6 +36,6 @@ layout: page
 	</div>
 </header>
 
-<div class="main" role="main">
+<div class="main {% if page.class == 'home' %}h-resume{% endif %}" role="main">
 	{{ content }}
 </div>	

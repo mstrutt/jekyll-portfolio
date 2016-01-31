@@ -3,17 +3,17 @@ layout: default
 class: blog
 ---
 
-<article itemscope="" itemtype="http://schema.org/BlogPosting">
-	<span itemprop="articleBody" class="markdown">
+<article itemscope="" itemtype="http://schema.org/BlogPosting" class="h-entry">
+	<span itemprop="articleBody" class="markdown e-content">
 		{{ content }}
 	</span>
 	<footer class="single-post">
 		<p class="metadata">
-	Written by <span itemprop="author">{% if page.author %}{{ page.author }}{% else %}Michael Strutt{% endif %}</span>
-	 on <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>.
+	Written by <span itemprop="author" class="p-author h-card">{% if page.author %}{{ page.author }}{% else %}Michael Strutt{% endif %}</span>
+	 on <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="dt-published">{{ page.date | date_to_string }}</time>.
 		</p>
 		{% if page.categories %}
-			<p class="tags">Categories: 
+			<p class="tags p-category">Categories: 
 				{% for cat in page.categories %}
 					<a href="/blog/tags/{{ cat }}/">{{ cat }}</a>
 				{% endfor %}
