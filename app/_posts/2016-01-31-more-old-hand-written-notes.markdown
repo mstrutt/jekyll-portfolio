@@ -1,52 +1,65 @@
-# Touch Events - @ppk
+---
+layout: post
+title: More old hand-written notes
+preview: The last of the old notes I found from a conference long ago
+date: 2016-01-31 20:38:49
+categories:
+- notes
+- webcomponents
+- regex
+---
+
+# Touch Events
 
 - Events
-	- touchstart
-	touchmove
-	touchend
-	touchcancel (vague)
+	- `touchstart`
+	`touchmove`
+	`touchend`
+	`touchcancel` (vague)
 - IE does it differently
-- "stick with click" reliable
+- "stick with `click`" reliable
 	- really means "activate"
 	- sadly slow (300ms)
 	- chrome experiment (removing click delay)
 - The event cascade
 	- anything but tap
 	- single tap
-		- IE quirk with mouseout event
-		- safari, if a content change occurs on mouseover or mouseout, the rest of the event stack is canceled
+		- IE quirk with `mouseout` event
+		- safari, if a content change occurs on `mouseover` or `mouseout`, the rest of the event stack is canceled
 - Separate events
-	- no touch-specific focus / blur
+	- no touch-specific `focus` / `blur`
 	- does every interaction class need its own set of events? "YES"
 	- Microsoft suggest merging pointer and touch
 	- new set of Microsoft events `-ms-touch-action: none`
 - Hover
 	- hover is an intent, might use later
-	- event info works, but co-ordinates are different
-	- use changedTouches
+	- event info works, but coordinates are different
+	- use `changedTouches`
 	- not in the MS model
 
 ## Web components can do that?
 
 - configuring things with meaningful tags with data though attributes
-- ```
+
+```
 <x-miley>
 <slideshow>
 	<img>
 </slideshow>
 ```
+
 - Polymer
 - attributes customise `<select>` behaviour
 - should work with other components
 - change attribute callback for customer elements
 - scoped styles
-- new selectros to style shadow dom root ^ elem, root ^^ elems
+- new selectors to style shadow dom root ^ elem, root ^^ elems
 - EVERYTHING is an element
 
 ## You don't want an object
 
 - Object
-	- messaging & late binging
+	- messaging & late binding
 	- hidden state
 	- controllers should not be objects, they're stateless, no need to persist
 - Having 1 user shouldn't limit us to 1 model
@@ -61,7 +74,7 @@
 ## Bits Behind JSBin
 
 - stream create() on JSBin
-- debounced savig
+- debounced saving
 	- "spike.js" send only the panel that is updated
 - Phonegap JSBin app
 - if (res.connection.writable === false)
@@ -72,7 +85,7 @@
 
 > `/^Reg(exp?|resessions)$/`
 
-- [leaverou.github.io/regexpexlained](https://leaverou.github.io/regexpexlained)
+- [leaverou.github.io/regexplained](https://leaverou.github.io/regexplained/)
 - matches cannot intersect
 - `/a{5}/g` => "aaaaa"
 - `{5,}` at least 5
