@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Notes from Front-end London, February 2016
-preview: My notes from Front-end London's February Event
+preview: My notes from Front-end London's February Event - CSS Modules, Design Sprints, and The Art of Reduxion
 date: 2016-02-25 19:00:00
 categories:
 - notes
@@ -130,4 +130,49 @@ JUST DO IT
 
 ## The Art of Reduxion - [Daniel Grant](https://twitter.com/danieljohngrant)
 
-- 
+- Reductionism - any system can be understood by breaking it down into it's parts
+- Redux: Current State + Action = New State
+	- every action advances the state forward
+- reducer takes a state, applies an action to it, and returns a new state
+- In a nut shell
+	- A change in an element triggers an action
+	- This goes into the reducer with the existing state
+	- The reducer returns a new state
+	- The store takes this new state and updates the components
+	- Components re-render if they need to
+
+> Impressive line coding...
+
+- Store
+	- takes a reducer argument
+	- has a state
+	- a function to dispatch actions  `state = reducer(state, action)`
+	- a way to retrieve the state
+	- a way to subscribe to changes in the state
+		- simplistically adding each listener to the list of listeners
+- Reducer
+	- takes a state and an action, and returns a new state
+- Actions
+	- have a `type`, `value`
+	- `if (action.type === 'ADD') return [...state, action.value]`
+- Have some kind of component that dispatches an action when its value changes
+
+### Connecting it to React
+
+- there is ReactRedux, which sets up bindings between the two
+- Redux can be used with anything, it's not tied to React, it's just a good match
+
+### Thinking in Redux
+
+- Take a look at SoundRedux
+- create reducers for each different parts of your state
+	- use `combineReducers`
+	- each one returns the slice of the state it's interested in
+
+### Good examples
+
+- redux.js.org
+- twitter.com/dan_abramov
+- egghead.id/series/getting-started-with-redux
+- github.com/djgrant/redux-fel-talk
+- github.com/reactjs/redux
