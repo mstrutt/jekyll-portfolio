@@ -168,6 +168,7 @@ JUST DO IT
 - create reducers for each different parts of your state
 	- use `combineReducers`
 	- each one returns the slice of the state it's interested in
+- State design is one of the big challenges
 
 ### Good examples
 
