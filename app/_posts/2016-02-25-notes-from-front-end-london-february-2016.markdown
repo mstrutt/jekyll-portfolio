@@ -6,13 +6,19 @@ date: 2016-02-25 19:00:00
 categories:
 - notes
 - fel
+- css
+- css modules
+- react
+- agile
+- design
+- redux
 ---
 
 ## CSS Modules: Who, What, Where, When, Why?! - [Christopher Pearce](https://twitter.com/chrisui)
 
 ### Who?
 
-- @geelen @markdalgleish @sokra
+- [@geelen](https://twitter.com/geelen) [@markdalgleish](https://twitter.com/markdalgleish) [@sokra](https://twitter.com/sokra)
 
 ### What?
 
@@ -21,7 +27,7 @@ categories:
 - OOCSS and BEM feel a bit like avoiding the problem, not tackling it head-on
 - CSS Modules takes your styles and creates globally unique class names for the selectors
 - It's a fundamental change to the way we think about and write out styles
-- It's a guarentee that the code you're writing isn't impacted by the code outside it
+- It's a guarantee that the code you're writing isn't impacted by the code outside it
 
 ```
 import styles from 'buttons.css'
@@ -29,6 +35,7 @@ import styles from 'buttons.css'
 const Button = () => ()
 	<button className={styles.button} />
 );
+```
 
 ### Where?
 
@@ -45,7 +52,7 @@ const Button = () => ()
 - "fundamental change" can sound quite scary
 - "The Three Code-ilities"
 	- Maintainability
-		- very easy to fix a bug or add a new feature, without worying about external side-affects
+		- very easy to fix a bug or add a new feature, without worrying about external side-affects
 	- Scalability
 		- Infinite number of developers can work on their components without conflicts
 	- Stability
@@ -55,7 +62,7 @@ const Button = () => ()
 
 - There's the ability to provide defaults to be used
 - You can still use your usual post-optimisation workflow after CSS Modules have run
-- You can use Sass/LESS infront of CSS Modules
+- You can use Sass/LESS in front of CSS Modules
 
 
 ## Design Sprints - Making your design process agile - [Jo Franchetti](https://twitter.com/thisisjofrank)
@@ -68,13 +75,13 @@ const Button = () => ()
 - Run a design sprint
 	- a fast structured way of developing your ideas
 	- solve one design problem
-	- 5 stages (1 day each): unpack sketch decide prototype test
+	- 5 stages (1 day each): unpack, sketch, decide, prototype, test
 
 ### Running a sprint
 
 - Prepare
 	- choose a problem
-	- gather your team, including
+	- gather your team, including:
 		- a stakeholder
 		- a manager
 		- a developer
@@ -82,7 +89,7 @@ const Button = () => ()
 	- clear your calendars
 	- schedule your user-testing in advance
 	- book a room, for the whole sprint
-	- gather supplies (postits, pens, whiteboard, research data)
+	- gather supplies (post-its, pens, white-board, research data)
 - Unpack
 	- outline what to do
 	- share all the data and research
@@ -102,7 +109,7 @@ const Button = () => ()
 - Prototype
 	- depends on the skills in your team: code / indesign / powerpoint even
 	- just make something the user can interact with (what would you *expect* to happen when you click here)
-	- use real copy in your prototype, not lorem ipsum
+	- use real copy in your prototype, not *lorem ipsum*
 	- ensure the script is right for the testing, work with the person running it
 - Test
 	- make sure everything is all set up and ready, double check
@@ -110,11 +117,11 @@ const Button = () => ()
 	- you want to get ways to improve your idea, and your product as a whole
 	- everyone records their opinions to compare
 
-### WHat next?
+### What next?
 
-- plan them a bit ahead to be able to use the results
-- you might just need to fine tune it, you may need to break it down further or test it again
-- even if they hated it, it's good to find out with only a day spent developing the prototype
+- Plan them a bit ahead to be able to use the results
+- You might just need to fine tune it, you may need to break it down further or test it again
+- Even if they hated it, it's good to find out with only a day spent developing the prototype
 
 ### Learn from our mistakes
 
@@ -141,7 +148,7 @@ JUST DO IT
 	- The store takes this new state and updates the components
 	- Components re-render if they need to
 
-> Impressive line coding...
+> Impressive live coding goes here...
 
 - Store
 	- takes a reducer argument
@@ -165,15 +172,15 @@ JUST DO IT
 ### Thinking in Redux
 
 - Take a look at SoundRedux
-- create reducers for each different parts of your state
+- create reducers for each different part of your state
 	- use `combineReducers`
 	- each one returns the slice of the state it's interested in
 - State design is one of the big challenges
 
 ### Good examples
 
-- redux.js.org
-- twitter.com/dan_abramov
-- egghead.id/series/getting-started-with-redux
-- github.com/djgrant/redux-fel-talk
-- github.com/reactjs/redux
+- [redux.js.org](http://redux.js.org/)
+- [@dan_abramov](https://twitter.com/dan_abramov)
+- [egghead.io/series/getting-started-with-redux](https://egghead.io/series/getting-started-with-redux)
+- [github.com/djgrant/redux-fel-talk](https://github.com/djgrant/redux-fel-talk)
+- [github.com/reactjs/redux](https://github.com/reactjs/redux)
