@@ -26,7 +26,6 @@
     "grunt-eslint": "17.1.0",
     "grunt-jekyll": "~0.4.1",
     "grunt-match-media": "0.1.0",
-    "grunt-phantomcss": "git://github.com/clarkeadg/grunt-phantomcss.git",
     "grunt-sass": "~1.0.0",
     "grunt-svgstore": "^0.5.0",
     "grunt-usemin": "~3.1.1",
