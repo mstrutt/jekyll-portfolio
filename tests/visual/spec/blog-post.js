@@ -1,4 +1,4 @@
-casper.thenOpen('http://mstrutt.dev/blog/2015/02/notes-from-front-end-london-january/')
+casper.thenOpen('http://localhost:9000/blog/2015/03/notes-from-london-web-performance-march/')
 	.then(function() {
 		phantomcss.screenshot('html', 'blog-post--default');
 	});

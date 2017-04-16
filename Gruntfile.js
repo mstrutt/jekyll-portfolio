@@ -20,7 +20,8 @@ module.exports = function (grunt) {
 
 		clean: {
 			temp: ['<%= config.temp %>'],
-			build: ['<%= config.build %>']
+			build: ['<%= config.build %>'],
+			visual: ['results/visual']
 		},
 
 		copy: {
@@ -182,14 +183,6 @@ module.exports = function (grunt) {
 					viewportSize: [1024, 768]
 				},
 				src: '<%= phantomcss.x_small.src %>'
-			},
-			x_large: {
-				options: {
-					screenshots: 'tests/visual/x-large/',
-					results: 'results/visual/x-large/',
-					viewportSize: [1920, 1080]
-				},
-				src: '<%= phantomcss.x_small.src %>'
 			}
 		},
 
@@ -290,5 +283,11 @@ module.exports = function (grunt) {
 		grunt.task.run(tasks[target] || tasks['default']);
 	});
 
-	grunt.registerTask('test', ['eslint']);
+	grunt.registerTask('test', [
+		'eslint',
+		'build',
+		'connect:build',
+		'phantomcss',
+		'clean:visual'
+	]);
 };

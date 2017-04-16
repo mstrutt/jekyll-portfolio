@@ -1,4 +1,4 @@
-casper.thenOpen('http://mstrutt.dev/portfolio/')
+casper.thenOpen('http://localhost:9000/portfolio/')
 	.then(function() {
 		phantomcss.screenshot('html', 'portfolio--default');
 	});
