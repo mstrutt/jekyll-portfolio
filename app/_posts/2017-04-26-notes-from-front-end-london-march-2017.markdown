@@ -10,7 +10,6 @@ categories:
 - css
 ---
 
-
 ## Reflect and refactor - [Melinda Seckington](https://twitter.com/mseckington)
 
 - Number one thing to learn it “learning to adapt”
