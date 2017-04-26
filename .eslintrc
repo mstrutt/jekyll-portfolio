@@ -26,7 +26,7 @@
 		"no-multiple-empty-lines": 2,
 		"no-nested-ternary": 2,
 		"operator-assignment": [2, "always"],
-		"space-after-keywords": [2, "always"],
+		"keyword-spacing": 2,
 		"space-before-blocks": [2, "always"],
 		"space-before-function-paren": [2, {
 			"anonymous": "never",
